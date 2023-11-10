@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
@@ -49,6 +50,8 @@ public class HomeFragment extends Fragment {
 
         getPermission();
         camera = view.findViewById(R.id.camera);
+        Drawable icon = getResources().getDrawable(R.drawable.baseline_photo_camera_24);
+        camera.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null);
         gallery = view.findViewById(R.id.image);
 
         // Set click listeners
