@@ -1,8 +1,10 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.capstone.ricedoc.R;
 
 public class BookCard7 extends AppCompatActivity {
 

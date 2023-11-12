@@ -1,4 +1,4 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
+
+import com.capstone.ricedoc.R;
 
 public class BooksFragment extends Fragment implements View.OnClickListener {
 

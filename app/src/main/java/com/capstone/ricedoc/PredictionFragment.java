@@ -1,4 +1,4 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,6 +17,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import androidx.fragment.app.Fragment;
+
+import com.capstone.ricedoc.R;
 
 public class PredictionFragment extends Fragment {
     private WebView webView;

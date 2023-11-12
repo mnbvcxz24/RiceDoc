@@ -1,4 +1,4 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 

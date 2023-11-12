@@ -6,7 +6,6 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -21,7 +20,10 @@
         android:theme="@style/Theme.RiceDoc"
         tools:targetApi="31">
         <activity
-            android:name=".splashscreen"
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoadingScreen"
             android:exported="false" />
         <activity
             android:name=".BookCard7"
@@ -51,7 +53,7 @@
             android:name=".description_healthy"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

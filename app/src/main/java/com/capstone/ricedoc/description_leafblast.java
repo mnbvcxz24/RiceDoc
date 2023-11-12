@@ -1,4 +1,4 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.capstone.ricedoc.R;
 
 public class description_leafblast extends AppCompatActivity {
     TextView nameDisease;
@@ -21,7 +23,6 @@ public class description_leafblast extends AppCompatActivity {
         nameDisease = findViewById(R.id.textView);
         nameDisease.setText(result);
 
-        // Receive the image data from the Intent
         byte[] byteArray = getIntent().getByteArrayExtra("imageByteArray");
         Bitmap receivedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 

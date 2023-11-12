@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E1FDD2"
-    tools:context=".PredictionFragment">
+    tools:context="com.capstone.ricedoc.PredictionFragment">
 
     <WebView
         android:id="@+id/webview"

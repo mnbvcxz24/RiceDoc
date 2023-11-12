@@ -1,4 +1,4 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import android.Manifest;
 import android.content.Intent;
@@ -20,11 +20,10 @@ import android.app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.ricedoc.ml.Testing4;
+import com.capstone.ricedoc.ml.Testing4;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -192,7 +191,9 @@ public class HomeFragment extends Fragment {
         thumbnailBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte[] byteArray = stream.toByteArray();
 
-        Intent intent;
+        Intent loadingIntent = new Intent(requireContext(), LoadingScreen.class);
+
+        /***Intent intent;
 
         if ("Brown Spot".equals(result)) {
             intent = new Intent(requireContext(), description_leafblast.class);
@@ -208,11 +209,10 @@ public class HomeFragment extends Fragment {
             // Default case or handle other scenarios
             Toast.makeText(requireContext(), "The image is blur or unclear. Please try again.", Toast.LENGTH_SHORT).show();
             return;
-        }
-
-        intent.putExtra("imageByteArray", byteArray);
-        intent.putExtra("text", result);
-        intent.putExtra("confident_key", conPercentage);
-        startActivity(intent);
+        }**/
+        loadingIntent.putExtra("imageByteArray", byteArray);
+        loadingIntent.putExtra("text", result);
+        loadingIntent.putExtra("confident_key", conPercentage);
+        startActivity(loadingIntent);
     }
 }

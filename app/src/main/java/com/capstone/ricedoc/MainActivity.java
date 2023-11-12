@@ -1,15 +1,12 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
 
+import com.capstone.ricedoc.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

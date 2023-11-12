@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        tools:context=".BookCard5">
+        tools:context="com.capstone.ricedoc.BookCard5">
 
         <TextView
             android:id="@+id/textView"

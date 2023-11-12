@@ -1,14 +1,16 @@
-package com.example.ricedoc;
+package com.capstone.ricedoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class description_healthy extends AppCompatActivity {
+import com.capstone.ricedoc.R;
+
+public class BookCard1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_description_healthy);
+        setContentView(R.layout.activity_book_card1);
     }
 }
