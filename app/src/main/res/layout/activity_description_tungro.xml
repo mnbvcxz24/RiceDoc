@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".description_leafblast">
+        tools:context=".description_tungro">
 
         <TextView
             android:id="@+id/confidencelevel"
@@ -60,11 +60,11 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:text="About the diseases(LeafBlast)"
+            android:layout_marginTop="32dp"
+            android:text="About the diseases(tungro)"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Rice leaf blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice crops."
+            android:text="Rice tungro disease is a viral disease that affects rice plants. It is caused by the rice tungro spherical virus (RTSV) and the rice tungro bacilliform virus (RTBV), both of which are transmitted by the green leafhopper insect (Nephotettix virescens). This disease primarily affects rice crops and can lead to significant reductions in yield and quality."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -110,11 +110,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="• Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
-            \n\n• Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
-            \n\n• Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
-\n\n• Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
-\n\n• Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle."
+            android:text="• Use Resistant Varieties: Plant rice varieties that are resistant to tungro disease. Resistant varieties can significantly reduce the impact of the disease on your crops.
+            \n\n• Early Planting: Planting rice early in the season can help avoid the peak period of green leafhopper activity, reducing the chances of transmission of the virus.
+            \n\n• Rouging: Remove and destroy infected plants as soon as symptoms are visible. This helps in reducing the source of the virus and prevents its spread to healthy plants.
+\n\n• Insecticide Application: Proper and timely application of insecticides can help control the green leafhopper population, which is responsible for transmitting the virus. Consult with agricultural experts or entomologists for advice on suitable insecticides and their application schedules.
+\n\n• Biological Control: Introduce natural predators and parasites of the green leafhopper, such as spiders and predatory insects, to help control their population naturally.
+"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -139,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Blast infection can lead to significant yield losses, sometimes up to 30-50% or even complete crop failure in severe cases. This can directly affect food security in regions where rice is a staple food.\n\n"
+            android:text="Infected plants typically show stunted growth, reduced tillering, and smaller panicles. This leads to a significant decrease in the overall rice yield per hectare.\n\n"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
