@@ -206,7 +206,7 @@ public class HomeFragment extends Fragment {
             intent = new Intent(requireContext(), description_leafblast.class);
         } else {
             // Default case or handle other scenarios
-            Toast.makeText(requireContext(), "The image belongs to an unknown or unclassified class.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "The image is blur or unclear. Please try again.", Toast.LENGTH_SHORT).show();
             return;
         }
 
