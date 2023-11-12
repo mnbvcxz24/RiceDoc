@@ -32,6 +32,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="20dp"
             android:text="Kinahanglan nga sa katapusang pagpatag sa basak, walay lugar nga sobra ang kalalum o kumabaw (Tupong ang pagkapatag sa yuta.)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_centerHorizontal="true"/>
 
         <ImageView
@@ -63,6 +64,7 @@
             android:layout_marginTop="15dp"
             android:gravity="start"
             android:text="Kamanghinundanon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold" />
 
         <TextView
@@ -85,6 +87,7 @@
             android:gravity="start"
             android:layout_marginTop="20dp"
             android:text="Mga Rekomendasyon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
         <TextView

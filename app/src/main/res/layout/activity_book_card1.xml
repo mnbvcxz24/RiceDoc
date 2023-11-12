@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gamit sa rekomendation matang sa &quot;Certified seeds&quot;"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"/>
@@ -61,6 +62,7 @@
             android:gravity="start"
             android:layout_marginHorizontal="20dp"
             android:text="Mga kinaiya sa sertipikasyong binhi"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
         <TextView
@@ -82,6 +84,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:text="Kamahinungdanon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
         <TextView
@@ -103,6 +106,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:text="Mga Rekomendasyon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
         <TextView
