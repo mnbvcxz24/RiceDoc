@@ -21,6 +21,9 @@
         android:theme="@style/Theme.RiceDoc"
         tools:targetApi="31">
         <activity
+            android:name=".splashscreen"
+            android:exported="false" />
+        <activity
             android:name=".BookCard7"
             android:exported="false" />
         <activity
