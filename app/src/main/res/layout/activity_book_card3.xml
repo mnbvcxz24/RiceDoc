@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#E1FDD2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        tools:context=".BookCard3">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pagtanum"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="A. Ipahigayon ang dungan nga pagtanum human makapahulay ang yuta"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pagtanum"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Kinahanglan nga papahulayon ang basakan og mga 30 ka adlaw o labaw pa. Kinahanglan usab nga kini matamnam sulod sa 14 ka adlaw, sa dili pa, ug sa tapos na, matamnamn ang kasagarang basakan nga nahisakop sa irigasyon."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="start"
+            android:text="Kamahinungdanon"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Pinaagi sa dungan nga pagtanum, malikayan ang mapadayonon nga pagsanay o padaghan sa mga dangan ug sakit sa humay. Ang usa ka bulan nga nagpapahulay sa basakan makaputol sa 'life cycle' sa mga dangan o insekto ug makahimo'g kadaut sa mga pinuy-anan sa sakit."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Mga Rekomendasyon" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="• Papahulaya o ayaw tamni ang basakan sulod sa usa ka bulan o labaw pa, gikan sa pag-ani, hangtud sa sunod nga tingtanum.\n\n• Ipahigayon ang pagtanum ug humay dungan sa tingtanum og humay sa mga kasikbit nga mga humayan sa inyong lugar."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="B. Kinahanglan adunay igong gidaghanon sa himsog nga mga tagod."
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="Ginabalhin-tanum (transplanted)"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView9"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Ipahigayon ang paghulip-tanum sa mga tagud nga nangamatay (sulod sa 7 ka adlaw gikan sa pagbalhin-binhi kinahanglan adunay 150 ka himsog nga tanum, matag usa ka metro-kwadradong luna, samtang ang humayan nga gisabwagan og 80 ka kilong binhi, kinahanglan adunay 300 o labaw pa, ka mga himsog nga tanum, matag usa ka metro-kwadradong luna."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="start"
+            android:text="Kamahinungdanon"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Ang himsog nga mga tagod o tanum dali motubo o molabong ug makasarang pakigkompetinsya sa mga sagbot."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Mga Rekomedasyon"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView13"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="• Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n• Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag.\n\n "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginHorizontal="20dp"/>
+    </RelativeLayout>
+</ScrollView>
