@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".description_leafblast">
+        tools:context=".description_sheathblight">
 
         <TextView
             android:id="@+id/confidencelevel"
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="About the diseases(LeafBlast)"
+            android:text="About the diseases(SheathBlight)"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.077"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Rice leaf blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice crops."
+            android:text="Rice sheath blight, caused by the fungus Rhizoctonia solani, is a significant disease that affects rice production worldwide."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -110,11 +110,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="• Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
-            \n\n• Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
-            \n\n• Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
-\n\n• Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
-\n\n• Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle."
+            android:text="• Crop Rotation: Avoid planting rice in the same field continuously. Rotate rice with non-host crops to reduce the buildup of the pathogen in the soil.
+            \n\n• Remove Infected Crop Residues: After harvest, remove and destroy infected crop residues to reduce the inoculum source for the next planting season.
+            \n\n• Fungicide Timing: If the disease pressure is high and cultural practices alone are insufficient, consider applying fungicides. Timing is crucial; apply fungicides during the early stages of the disease when symptoms first appear.
+\n\n• Biocontrol Agents: Some beneficial microorganisms, such as Trichoderma spp., have been found to be effective in suppressing rice sheath blight. These can be applied as biocontrol agents.
+\n\n• Improving Drainage:Ensure proper field drainage to prevent waterlogged conditions, which can favor the development of sheath blight.
+"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -139,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Blast infection can lead to significant yield losses, sometimes up to 30-50% or even complete crop failure in severe cases. This can directly affect food security in regions where rice is a staple food.\n\n"
+            android:text="One of the most significant impacts of rice sheath blight is a reduction in yield. The disease affects the photosynthetic area of the rice plant, leading to poor grain filling and reduced kernel weight. Yield losses can range from 10% to 50% or more, depending on the severity of the infection and the stage of crop development when the disease strikes.\n\n"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
