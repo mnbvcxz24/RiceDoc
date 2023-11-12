@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#E1FDD2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        tools:context=".BookCard5">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pagdumala sa Patubig"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Kinahanglan malikayan ang sobra o kulang nga tubig nga makaapekto sa pagtubo sa humay"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/patubig" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Kinahanglan walay makitang sintomas sa nasobrahan og patubig samtang nagatubo ang humay, sama sa diutay lamang ang mga sipak ug gagmay ang mga dahon. Maisip nga sobra ang patubig kung ang giladwon mini sa basakan labaw sa 5 sentimetro sulod sa pito ka adlaw o labaw pa.\n\nKinahanglab usab nga walay makitang sintomas sa kakulangan sa patubig, sama sa pagkulot-kulot sa mga dahon (leaf rolling), pagkalaya sa tumoy sa dahon, (leaf tip drying), dili motubo (stunted growth), menos ang uhay, daghang mga lugas nga walay unod, gikan sa panahon sa pagtubo, 'paglilihi,' hangtod nga makabaton na og unod nga mga lugas."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Kamahinungdanon"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="Ang tubig mao ang magadala sa mga sustansya gikan sa yuta paingon ngadto sa lain-laing bahin sa tanum. Ang husto nga patubig moresulta sa mga himsog nga tanum, nga maanindot ang 'bulas,' normal ang pagtubo, ug daku ang ani."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Mga rekomendasyon"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="•Kinahanglan nga ang giladmon sa tubig sa basakan mga 3.5 sentimetro, gikan sa panahon sa pagpangsipak hangtud mga 1-2 ka semana na dili pa mag-ani. Pahubsi ang mga basakan 1-2 ka semana sa dili pa mag-ani.\n\n•Alang sa mga yuta nga 'galas,' Pahubsi ang basakan mga usa ka semana sa dili pa mag-ani.\n\n•Apan sa mga yuta nga 'lagkitin' o lapokon, ipahigayon ang pagpahubas sa tubig sa basakan mga duha ka semana sa dili pa mag-ani.\n\n"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_below="@+id/textView6" />
+    </RelativeLayout>
+</ScrollView>
