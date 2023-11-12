@@ -14,7 +14,7 @@
         android:layout_width="260dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/ricedoc_textf" />
     <ImageView
         android:layout_width="300dp"
@@ -31,7 +31,7 @@
         android:layout_marginHorizontal="10dp"
         android:backgroundTint="#ffffff"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
+        app:cardElevation="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -62,7 +62,8 @@
                 android:layout_toLeftOf="@id/centerpoint"
                 android:backgroundTint="#52B91D"
                 android:drawableLeft="@drawable/baseline_photo_camera_24"
-                android:elevation="8dp"
+                android:outlineProvider="bounds"
+                android:elevation="5dp"
                 android:paddingLeft="20dp"
                 android:text="Camera" />
 
@@ -85,6 +86,8 @@
                 android:layout_toRightOf="@id/centerpoint"
                 android:backgroundTint="#52B91D"
                 android:drawableLeft="@drawable/baseline_image_24"
+                android:outlineProvider="bounds"
+                android:elevation="5dp"
                 android:paddingLeft="20dp"
                 android:text="Image" />
         </RelativeLayout>

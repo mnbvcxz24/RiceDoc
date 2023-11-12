@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1FDD2"
     tools:context=".PredictionFragment">
 
-    <!-- WebView -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"

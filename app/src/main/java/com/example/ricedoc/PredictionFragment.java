@@ -63,7 +63,7 @@ public class PredictionFragment extends Fragment {
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                requireActivity().onBackPressed();
+                webView.goBack();
             }
         });
         builder.show();
