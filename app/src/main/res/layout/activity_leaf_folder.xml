@@ -61,7 +61,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Rice leaf blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice crops."
+            android:text="The rice leaffolder (Cnaphalocrocis medinalis) is a significant pest that affects rice production. Its impact can be quite detrimental, leading to reduced crop yields and economic losses."
             />
 
         <TextView
@@ -83,11 +83,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="• Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
-            \n\n• Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
-            \n\n• Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
-\n\n• Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
-\n\n• Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle."
+            android:text="• Proper Field Hygiene: Remove and destroy crop residues after harvest to reduce overwintering sites for leaffolder larvae.
+            \n\n• Natural Predators: Encourage natural predators like spiders, ladybugs, and parasitoid wasps, which feed on leaffolder larvae and eggs.
+            \n\n• Insecticides: Chemical insecticides, such as pyrethroids and neonicotinoids, can be used to control leaffolders. However, their use should be judicious to prevent the development of pesticide resistance and minimize environmental impact.
+\n\n• Plant Resistant Rice Varieties: Plant rice varieties that are resistant or tolerant to leaffolder damage. Resistant varieties can significantly reduce the impact of the pest on crop yields.
+\n\n• Insecticide Application: If leaffolder populations are high and other control methods are insufficient, targeted insecticide applications can be considered. Consult with local agricultural extension services or entomologists to choose the right insecticide and application method."
             />
 
         <TextView
@@ -109,7 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Blast infection can lead to significant yield losses, sometimes up to 30-50% or even complete crop failure in severe cases. This can directly affect food security in regions where rice is a staple food.\n\n"
+            android:text="The primary impact of rice leaffolder infestation is a decrease in rice yields. Larvae of this pest feed on the green tissues of rice plants, including leaves, stems, and panicles. This feeding damage can reduce the plant's ability to photosynthesize, leading to stunted growth and lower grain production.\n\n"
             />
 
 
