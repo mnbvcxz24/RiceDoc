@@ -20,6 +20,27 @@
         android:theme="@style/Theme.RiceDoc"
         tools:targetApi="31">
         <activity
+            android:name=".Tungro"
+            android:exported="false" />
+        <activity
+            android:name=".Healthy"
+            android:exported="false" />
+        <activity
+            android:name=".StemBorer"
+            android:exported="false" />
+        <activity
+            android:name=".SheathBlight"
+            android:exported="false" />
+        <activity
+            android:name=".LeafFolder"
+            android:exported="false" />
+        <activity
+            android:name=".BrownSpot"
+            android:exported="false" />
+        <activity
+            android:name=".LeafBlast"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

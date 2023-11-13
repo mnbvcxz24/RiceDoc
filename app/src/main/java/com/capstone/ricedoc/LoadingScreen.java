@@ -57,7 +57,7 @@ public class LoadingScreen extends AppCompatActivity {
                 startActivity(finalIntent);
 
                 finish();
-            }, 3000);
+            }, 3500);
         }
     }
 }
