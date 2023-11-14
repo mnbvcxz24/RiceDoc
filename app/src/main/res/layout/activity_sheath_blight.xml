@@ -31,7 +31,7 @@
             android:layout_below="@+id/diseasename"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="0dp"
-            android:text="Fungus" />
+            android:text="Fungal" />
 
         <ImageView
             android:id="@+id/imagedisease"
