@@ -35,9 +35,7 @@ public class PredictionFragment extends Fragment {
         // Check network connectivity
         if (isNetworkAvailable()) {
             webView.setWebViewClient(new MyWebViewClient());
-            webView.setWebChromeClient(new MyWebChromeClient());
 
-            // Load a web page
             webView.loadUrl("https://moldy24.pythonanywhere.com");
         } else {
             showNoInternetDialog();
@@ -79,10 +77,6 @@ public class PredictionFragment extends Fragment {
         }
     }
 
-    private class MyWebChromeClient extends WebChromeClient {
-        // Handle progress, loading dialog, etc. if needed
-    }
-
     private void showErrorDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         builder.setTitle("Error Loading Page");
@@ -96,7 +90,7 @@ public class PredictionFragment extends Fragment {
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                requireActivity().finish(); // Close the app or handle accordingly
+                webView.goBack();
             }
         });
         builder.show();

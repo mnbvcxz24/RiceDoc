@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import com.capstone.ricedoc.ml.Testing4;
+import com.capstone.ricedoc.ml.Densenet121adam60;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -105,7 +105,8 @@ public class HomeFragment extends Fragment {
                 Uri selectedImageUri = data.getData();
                 try {
                     Bitmap originalBitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), selectedImageUri);
-                    int dimension = Math.min(originalBitmap.getWidth(), originalBitmap.getHeight());
+                    int maxDimension = 300;
+                    int dimension = Math.min(maxDimension, Math.min(originalBitmap.getWidth(), originalBitmap.getHeight()));
                     Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, dimension, dimension);
                     Bitmap resizedBitmap = Bitmap.createScaledBitmap(originalBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
 
@@ -135,7 +136,7 @@ public class HomeFragment extends Fragment {
 
     private void classifyImage(Bitmap resizedBitmap, Bitmap thumbnailBitmap) {
         try {
-            Testing4 model = Testing4.newInstance(requireActivity().getApplication());
+            Densenet121adam60 model = Densenet121adam60.newInstance(requireActivity().getApplication());
 
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * IMAGE_SIZE * IMAGE_SIZE * 3);
@@ -155,7 +156,7 @@ public class HomeFragment extends Fragment {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Testing4.Outputs outputs = model.process(inputFeature0);
+            Densenet121adam60.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
@@ -173,7 +174,7 @@ public class HomeFragment extends Fragment {
             Log.d("InferenceResult", "Max Confidence: " + maxConfidence);
             Log.d("InferenceResult", "Max Position: " + maxPos);
 
-            String[] classes = {"Brown Spot","Healthy","Leaf Blast","Sheath Blight","Tungro Virus","Unknown"};
+            String[] classes = {"Brown Spot","Healthy","Leaf Blast","Leaf Folder","Sheath Blight","Stem Borer","Tungro Virus","Unknown"};
             String result = classes[maxPos];
             String conPercentage = String.format("%.2f%%", maxConfidence * 100);
 
@@ -193,23 +194,6 @@ public class HomeFragment extends Fragment {
 
         Intent loadingIntent = new Intent(requireContext(), LoadingScreen.class);
 
-        /***Intent intent;
-
-        if ("Brown Spot".equals(result)) {
-            intent = new Intent(requireContext(), description_leafblast.class);
-        } else if ("Healthy".equals(result)) {
-            intent = new Intent(requireContext(), description_leafblast.class);
-        } else if ("Leaf Blast".equals(result)) {
-            intent = new Intent(requireContext(), description_leafblast.class);
-        } else if ("Sheath Blight".equals(result)) {
-            intent = new Intent(requireContext(), description_leafblast.class);
-        } else if ("Tungro Virus".equals(result)) {
-            intent = new Intent(requireContext(), description_leafblast.class);
-        } else {
-            // Default case or handle other scenarios
-            Toast.makeText(requireContext(), "The image is blur or unclear. Please try again.", Toast.LENGTH_SHORT).show();
-            return;
-        }**/
         loadingIntent.putExtra("imageByteArray", byteArray);
         loadingIntent.putExtra("text", result);
         loadingIntent.putExtra("confident_key", conPercentage);
