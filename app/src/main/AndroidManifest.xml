@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-feature android:name="android.hardware.camera" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -68,13 +66,7 @@
             android:name=".BookCard1"
             android:exported="false" />
         <activity
-            android:name=".description_leafblast"
-            android:exported="false" />
-        <activity
-            android:name=".description_healthy"
-            android:exported="false" />
-        <activity
-            android:name=".splashscreen"
+            android:name=".splashscreen" android:theme="@style/Base.Theme.RiceDoc"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

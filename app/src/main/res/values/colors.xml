@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="colorOfStatusBar">#4CAF50</color>
     <color name="white">#FFFFFFFF</color>
     <color name="selectedItem">#E1FDD2</color>
     <color name="deselectedItem">#52B91D</color>
