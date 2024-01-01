@@ -1,8 +1,11 @@
 package com.capstone.ricedoc;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
@@ -12,14 +15,20 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -33,6 +42,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
@@ -41,19 +51,35 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE_GALLERY = 13;
     int IMAGE_SIZE = 224;
     Button camera, gallery;
-
+    ImageButton btnLanguage;
+    private static final String PREF_SELECTED_LANGUAGE = "selected_language";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //TOOLBAR
+        androidx.appcompat.widget.Toolbar toolbar = view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
+
+        btnLanguage = view.findViewById(R.id.btnLanguage);
+
+        //CLICK LISTENER FOR THE LANGUAGE BUTTON
+        btnLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLanguageMenu(v);
+            }
+        });
+
+        //PERMISSIONS AND CAMERA/GALLERY BUTTON
         getPermission();
         camera = view.findViewById(R.id.camera);
         Drawable icon = getResources().getDrawable(R.drawable.baseline_photo_camera_24);
         camera.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null);
         gallery = view.findViewById(R.id.image);
 
-        // Set click listeners
+        //CLICK LISTENER FOR CAMERA/GALLERY BUTTON
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +87,6 @@ public class HomeFragment extends Fragment {
                 startActivityForResult(intent, REQUEST_CODE_CAMERA);
             }
         });
-
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,9 +96,70 @@ public class HomeFragment extends Fragment {
                 startActivityForResult(intent, REQUEST_CODE_GALLERY);
             }
         });
+
+        setLocale(loadSelectedLanguage());
         return view;
     }
 
+    private void showLanguageMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(requireContext(), view);
+        popupMenu.inflate(R.menu.language_menu);
+
+        // Set item click listener
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int itemId = item.getItemId();
+                if (itemId == R.id.menu_item_english) {
+                    setLocale("en");
+                    return true;
+                } else if (itemId == R.id.menu_item_cebuano) {
+                    setLocale("ceb");
+                    return true;
+                }
+                return false;
+            }
+        });
+        // Show the popup menu
+        popupMenu.show();
+    }
+    private void setLocale(String languageCode) {
+        Locale newLocale = new Locale(languageCode);
+        Locale currentLocale = getResources().getConfiguration().locale;
+
+        if (!currentLocale.equals(newLocale)) {
+            Locale.setDefault(newLocale);
+
+            Configuration config = new Configuration();
+            config.locale = newLocale;
+
+            Context context = requireContext();
+            context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
+
+            saveSelectedLanguage(languageCode);
+
+            restartActivity();
+        }
+    }
+    private void saveSelectedLanguage(String languageCode) {
+        SharedPreferences preferences = requireContext().getSharedPreferences(
+                requireContext().getPackageName(), Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(PREF_SELECTED_LANGUAGE, languageCode);
+        editor.apply();
+    }
+    private String loadSelectedLanguage() {
+        SharedPreferences preferences = requireContext().getSharedPreferences(
+                requireContext().getPackageName(), Context.MODE_PRIVATE);
+
+        return preferences.getString(PREF_SELECTED_LANGUAGE, "en");
+    }
+    private void restartActivity() {
+        Intent intent = requireActivity().getIntent();
+        requireActivity().finish();
+        requireActivity().startActivity(intent);
+    }
     private boolean getPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -170,9 +256,9 @@ public class HomeFragment extends Fragment {
                 }
             }
             // Log the results
-            Log.d("InferenceResult", "Confidences: " + Arrays.toString(confidences));
-            Log.d("InferenceResult", "Max Confidence: " + maxConfidence);
-            Log.d("InferenceResult", "Max Position: " + maxPos);
+            //Log.d("InferenceResult", "Confidences: " + Arrays.toString(confidences));
+            //Log.d("InferenceResult", "Max Confidence: " + maxConfidence);
+            //Log.d("InferenceResult", "Max Position: " + maxPos);
 
             String[] classes = {"Brown Spot","Healthy","Leaf Blast","Leaf Folder","Sheath Blight","Stem Borer","Tungro Virus","Unknown"};
             String result = classes[maxPos];

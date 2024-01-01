@@ -3,6 +3,7 @@
     <style name="Base.Theme.RiceDoc" parent="Theme.Material3.Light.NoActionBar">
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/colorOfStatusBar</item>
+
     </style>
 
     <style name="Theme.RiceDoc" parent="Base.Theme.RiceDoc"/>

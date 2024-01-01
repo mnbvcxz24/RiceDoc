@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -17,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RiceDoc"
         tools:targetApi="31">
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
         <activity
             android:name=".Tungro"
             android:exported="false" />
@@ -66,8 +71,9 @@
             android:name=".BookCard1"
             android:exported="false" />
         <activity
-            android:name=".splashscreen" android:theme="@style/Base.Theme.RiceDoc"
-            android:exported="true">
+            android:name=".splashscreen"
+            android:exported="true"
+            android:theme="@style/Base.Theme.RiceDoc">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
