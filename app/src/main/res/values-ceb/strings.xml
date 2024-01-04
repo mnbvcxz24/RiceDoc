@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RiceDoc</string>
-    <string name="home_text">HomeCeb</string>
+    <string name="home_text">Home</string>
+    <string name="lang">Ceb</string>
+    <string name="phase1">Pagkuha og picture</string>
+    <string name="phase2">Kuhaa ang result</string>
+    <string name="phase3">Kuhaa ang diagnosis</string>
 </resources>

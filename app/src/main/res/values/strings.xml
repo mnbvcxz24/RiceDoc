@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">RiceDoc</string>
     <string name="home_text">Home</string>
+    <string name="lang">En</string>
+    <string name="phase1">Take a picture</string>
+    <string name="phase2">Get a result</string>
+    <string name="phase3">Get diagnosis</string>
 </resources>

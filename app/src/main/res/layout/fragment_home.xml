@@ -22,8 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginHorizontal="15dp">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/homeText"
@@ -33,15 +32,21 @@
                 android:textColor="@color/white"
                 android:text="@string/home_text"/>
             <TextView
-                android:id="@+id/blankCenterPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="1dp"
-                android:text=""/>
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/lang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/lang"/>
+
             <ImageButton
                 android:id="@+id/btnLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:paddingHorizontal="15dp"
                 android:src="@drawable/baseline_language_24"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
@@ -54,7 +59,7 @@
         android:layout_width="260dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/ricedoc_textf" />
 
     <ImageView
@@ -82,15 +87,50 @@
                 android:id="@+id/riceDocInfo"
                 android:layout_width="300dp"
                 android:layout_height="100dp"
-                android:layout_above="@+id/image"
+                android:layout_above="@+id/phase1"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
-                android:layout_marginBottom="30dp"
                 android:src="@drawable/ricedoc_info" />
+
+            <TextView
+                android:id="@+id/phase1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_above="@+id/camera"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@id/phase2"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="9dp"
+                android:text="@string/phase1" />
+
+            <TextView
+                android:id="@+id/phase2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_below="@id/riceDocInfo"
+                android:layout_above="@+id/camera"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="9dp"
+                android:text="@string/phase2" />
+
+            <TextView
+                android:id="@+id/phase3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_above="@+id/camera"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/phase2"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/phase3" />
 
             <Button
                 android:id="@+id/camera"
