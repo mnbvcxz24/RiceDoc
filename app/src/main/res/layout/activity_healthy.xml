@@ -41,7 +41,7 @@
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="Your rice is healthy."
+            android:text=""
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textStyle="bold" />
 

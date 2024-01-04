@@ -43,6 +43,7 @@
             android:layout_marginTop="10dp" />
         <TextView
             android:id="@+id/confidence"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imagedisease"
@@ -57,6 +58,7 @@
             android:text=""/>
         <TextView
             android:id="@+id/confidencelevel"
+            android:textSize="9pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imagedisease"
@@ -65,17 +67,19 @@
             android:text=""/>
         <TextView
             android:id="@+id/head1"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/confidence"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="About the diseases"
+            android:text="@string/AboutDisease"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
         <TextView
             android:id="@+id/content1"
+            android:textSize="9pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/head1"
@@ -87,17 +91,19 @@
 
         <TextView
             android:id="@+id/head2"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/content1"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
-            android:text="Treatment"
+            android:text="@string/treatment"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
         <TextView
             android:id="@+id/content2"
+            android:textSize="9pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/head2"
@@ -113,17 +119,19 @@
 
         <TextView
             android:id="@+id/head3"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/content2"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
-            android:text="Projected damage estimation"
+            android:text="@string/ProjectEstimated"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
         <TextView
             android:id="@+id/content3"
+            android:textSize="9pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/head3"

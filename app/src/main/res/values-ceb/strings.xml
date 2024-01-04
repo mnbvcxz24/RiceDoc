@@ -6,4 +6,29 @@
     <string name="phase1">Pagkuha og picture</string>
     <string name="phase2">Kuhaa ang result</string>
     <string name="phase3">Kuhaa ang diagnosis</string>
+    <string name="camera">Kamera</string>
+    <string name="image">hulagway</string>
+
+    <string name="AboutDisease">Mahitungod sa sakit</string>
+    <string name="treatment">Pagtambal</string>
+    <string name="ProjectEstimated">Gibanabana nga kadaot</string>
+
+        //leafblast
+    <string name="leafblastContent1">Rice leaf blast, tungod sa fungus nga Magnaporthe oryzae, usa sa labing makadaot nga sakit nga nakaapekto sa mga tanum nga humay.</string>
+    <string name="leafblastContent2">• Crop Rotation: Likayi ang pagtanom og humay nga magkasunod-sunod. I-balhin ang humay sa ubang mga tanom aron maputol ang cycle sa sakit.
+            \n\n• Mga Mapuslanon nga Mikroorganismo: Ang ubang mga mapuslanong mikroorganismo, sama sa pipila ka mga strain sa bakterya ug fungi, makapugong sa pagtubo sa blast fungus. Mahimo kining gamiton sa yuta o mga dahon isip mga ahente sa pagkontrol sa biyolohikal.
+            \n\n• Mga Fungicide: Ang mga fungicide mahimong gamiton sa pagdumala sa Leaf blast. Bisan pa, ang ilang paggamit kinahanglan nga mabinantayon aron mapugngan ang pag-uswag sa mga lahi nga resistensya sa fungicide. Pagkonsulta sa lokal nga serbisyo sa pagpalawig sa agrikultura alang sa girekomenda nga fungicide ug mga pamaagi sa paggamit.
+\n\n• Scouting: Kanunay nga bantayan ang imong mga umahan alang sa mga timailhan sa Leaf blast. Ang sayo nga pag-ila nagtugot sa tukma sa panahon nga interbensyon ug makapugong sa pagdaghan sa sakit.
+\n\n• Pagdumala sa Residue: Sakto nga ilabay ang mga salin sa ani pagkahuman ani. Ang nataptan nga tanum nga materyal nga nahabilin sa uma mahimong magtago sa fungus ug makatampo sa cycle sa sakit.</string>
+    <string name="LeafblastContent3">Blast infection mahimong mosangpot sa dakong kapildihan sa abot, usahay hangtod sa 30-50% o bisan sa bug-os nga kapakyasan sa ani sa grabeng mga kaso. Mahimo kining direktang makaapekto sa seguridad sa pagkaon sa mga rehiyon diin ang bugas usa ka pangunang pagkaon.\n\n</string>
+
+    //sheathblight
+    <string name="sheathblightContent1">Rice sheath blight, tungod sa fungus nga Rhizoctonia solani, usa ka mahinungdanong sakit nga makaapekto sa produksyon sa humay sa tibuok kalibutan.</string>
+    <string name="sheathblightContent2">• Crop Rotation: Likayi ang pagtanom og humay sa samang umahan nga padayon. I-balhin ang humay nga adunay mga tanum nga dili host aron makunhuran ang pagtipon sa pathogen sa yuta.
+            \n\n• Pagtangtang sa Nataptan nga mga Salin sa Tanum: Human sa pag-ani, kuhaa ug gub-a ang mga nataptan nga salin sa tanum aron makunhuran ang tinubdan sa inoculum alang sa sunod nga panahon sa pagpananom.
+            \n\n• Tayming sa Fungicide: Kung taas ang presyur sa sakit ug dili igo ang mga kultural nga praktis, ikonsiderar ang paggamit ug fungicide. Ang panahon hinungdanon; pagbutang og fungicide sa unang mga hugna sa sakit sa diha nga ang mga simtomas unang makita.
+\n\n• Mga Ahente sa Pagkontrol sa Bio: Ang ubang mga mapuslanon nga mikroorganismo, sama sa Trichoderma spp., nakit-an nga epektibo sa pagsumpo sa rice sheath blight. Mahimo kining gamiton isip mga ahente sa biocontrol.
+\n\n• Pag-ayo sa Drainage: Siguruha ang husto nga kanal sa umahan aron malikayan ang mga kahimtang sa tubig, nga mahimong pabor sa pag-uswag sa sheath blight.</string>
+    <string name="sheathblightContent3">Usa sa labing mahinungdanong epekto sa rice sheath blight mao ang pagkunhod sa ani. Ang sakit makaapekto sa photosynthetic nga lugar sa tanum nga humay, nga mosangpot sa dili maayo nga pagpuno sa lugas ug pagkunhod sa timbang sa kernel. Ang pagkawala sa abot mahimong gikan sa 10% ngadto sa 50% o labaw pa, depende sa kagrabe sa impeksyon ug sa yugto sa paglambo sa tanum kung ang sakit moigo.\n\n</string>
+
 </resources>

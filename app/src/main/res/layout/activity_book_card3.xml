@@ -16,6 +16,7 @@
 
         <TextView
             android:id="@+id/textView"
+            android:textSize="14pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pagtanum"
@@ -27,6 +28,7 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
@@ -47,6 +49,7 @@
 
         <TextView
             android:id="@+id/textView3"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
@@ -58,6 +61,7 @@
 
         <TextView
             android:id="@+id/textView4"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView3"
@@ -70,6 +74,7 @@
 
         <TextView
             android:id="@+id/textView5"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView4"
@@ -81,6 +86,7 @@
 
         <TextView
             android:id="@+id/textView6"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView5"
@@ -92,6 +98,7 @@
 
         <TextView
             android:id="@+id/textView7"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView6"
@@ -103,6 +110,7 @@
 
         <TextView
             android:id="@+id/textView8"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView7"
@@ -114,6 +122,7 @@
 
         <TextView
             android:id="@+id/textView9"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView8"
@@ -126,6 +135,7 @@
 
         <TextView
             android:id="@+id/textView10"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView9"
@@ -137,6 +147,7 @@
 
         <TextView
             android:id="@+id/textView11"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView10"
@@ -149,6 +160,7 @@
 
         <TextView
             android:id="@+id/textView12"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView11"
@@ -160,6 +172,7 @@
 
         <TextView
             android:id="@+id/textView13"
+            android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView12"
@@ -171,6 +184,7 @@
 
         <TextView
             android:id="@+id/textView14"
+            android:textSize="11pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView13"
