@@ -85,7 +85,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Rice tungro disease is a viral disease that affects rice plants. It is caused by the rice tungro spherical virus (RTSV) and the rice tungro bacilliform virus (RTBV), both of which are transmitted by the green leafhopper insect (Nephotettix virescens). This disease primarily affects rice crops and can lead to significant reductions in yield and quality."
+            android:text="@string/tungroContent1"
             />
 
         <TextView
@@ -109,11 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="• Use Resistant Varieties: Plant rice varieties that are resistant to tungro disease. Resistant varieties can significantly reduce the impact of the disease on your crops.
-            \n\n• Early Planting: Planting rice early in the season can help avoid the peak period of green leafhopper activity, reducing the chances of transmission of the virus.
-            \n\n• Rouging: Remove and destroy infected plants as soon as symptoms are visible. This helps in reducing the source of the virus and prevents its spread to healthy plants.
-\n\n• Insecticide Application: Proper and timely application of insecticides can help control the green leafhopper population, which is responsible for transmitting the virus. Consult with agricultural experts or entomologists for advice on suitable insecticides and their application schedules.
-\n\n• Biological Control: Introduce natural predators and parasites of the green leafhopper, such as spiders and predatory insects, to help control their population naturally."
+            android:text="@string/tungroContent2"
             />
 
         <TextView
@@ -137,7 +133,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Infected plants typically show stunted growth, reduced tillering, and smaller panicles. This leads to a significant decrease in the overall rice yield per hectare.\n\n"
+            android:text=""
             />
 
 

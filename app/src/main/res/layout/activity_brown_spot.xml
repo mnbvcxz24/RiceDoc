@@ -85,7 +85,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Rice brown spot, caused by the fungus Bipolaris oryzae, is a common disease affecting rice plants. Its impacts on production can be significant and varied, depending on the severity of the infection, the rice variety, environmental conditions, and the stage of crop development."
+            android:text="@string/brownspotContent1"
             />
 
         <TextView
@@ -109,11 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="• Resistant Varieties: Planting rice varieties that are resistant or less susceptible to brown spot can be an effective strategy. Consult with local agricultural extension services or research institutions to identify suitable resistant varieties for your region.
-            \n\n• Crop Rotation: Implement crop rotation practices to break the disease cycle. Avoid planting rice in the same field consecutively, as the pathogen can survive in crop debris.
-            \n\n• Seed Treatment: Use disease-free, certified seeds and treat them with fungicides or hot water to reduce the risk of introducing the pathogen into the field through infected seeds.
-\n\n• Proper Irrigation: Avoid excessive or continuous flooding, as this can create favorable conditions for the disease. Use intermittent or alternate wetting and drying (AWD) irrigation practices to reduce disease incidence.
-\n\n• Fungicides: When the disease reaches damaging levels, chemical control may be necessary. Fungicides containing active ingredients like azoxystrobin, propiconazole, or tricyclazole are effective against rice brown spot. Follow the recommended application rates and timing provided on the product label."
+            android:text="@string/brownspotContent2"
             />
 
         <TextView
@@ -137,7 +133,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Brown spot affects the photosynthetic capacity of the leaves, leading to reduced grain filling and ultimately decreased yield. Severe infections can cause significant yield losses, sometimes up to 50% or more.\n\n"
+            android:text="@string/brownspotContent3"
             />
 
 

@@ -86,7 +86,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="The rice leaffolder (Cnaphalocrocis medinalis) is a significant pest that affects rice production. Its impact can be quite detrimental, leading to reduced crop yields and economic losses."
+            android:text="@string/leaffolderContent1"
             />
 
         <TextView
@@ -110,11 +110,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="• Proper Field Hygiene: Remove and destroy crop residues after harvest to reduce overwintering sites for leaffolder larvae.
-            \n\n• Natural Predators: Encourage natural predators like spiders, ladybugs, and parasitoid wasps, which feed on leaffolder larvae and eggs.
-            \n\n• Insecticides: Chemical insecticides, such as pyrethroids and neonicotinoids, can be used to control leaffolders. However, their use should be judicious to prevent the development of pesticide resistance and minimize environmental impact.
-\n\n• Plant Resistant Rice Varieties: Plant rice varieties that are resistant or tolerant to leaffolder damage. Resistant varieties can significantly reduce the impact of the pest on crop yields.
-\n\n• Insecticide Application: If leaffolder populations are high and other control methods are insufficient, targeted insecticide applications can be considered. Consult with local agricultural extension services or entomologists to choose the right insecticide and application method."
+            android:text="@string/leaffolderContent2"
             />
 
         <TextView
@@ -138,7 +134,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="The primary impact of rice leaffolder infestation is a decrease in rice yields. Larvae of this pest feed on the green tissues of rice plants, including leaves, stems, and panicles. This feeding damage can reduce the plant's ability to photosynthesize, leading to stunted growth and lower grain production.\n\n"
+            android:text="@string/leaffolderContent3"
             />
 
 

@@ -85,7 +85,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Rice stem borers are a group of insect pests that can have significant negative impacts on rice production. These pests belong to various species of moths and beetles, with the larvae (caterpillars) being the primary culprits. The most common rice stem borers include the yellow stem borer (Scirpophaga incertulas) and the striped stem borer (Chilo suppressalis)."
+            android:text="@string/stemborerContent1"
             />
 
         <TextView
@@ -109,11 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="• Use Resistant Varieties: Plant rice varieties that are resistant or tolerant to stem borers. Resistant varieties can significantly reduce the impact of these pests on the crop
-            \n\n• Natural Enemies: Encourage natural enemies of stem borers, such as parasitoid wasps and predators like birds and spiders, which feed on stem borer eggs and larvae.
-            \n\n• Pesticides: Insecticides can be used when the pest population reaches an economic threshold and other control methods are not sufficient. Consult with local agricultural authorities or entomologists to determine the appropriate insecticides and application methods.
-\n\n• Integrated Pest Management (IPM): Implement an IPM approach, combining various control methods judiciously to minimize the use of chemical pesticides and reduce the impact on non-target organisms and the environment.
-\n\n• Proper Application: If pesticides are necessary, apply them at the recommended dosage and timing. Follow safety guidelines and local regulations regarding pesticide use."
+            android:text="@string/stemborerContent2"
             />
 
         <TextView
@@ -137,7 +133,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="Rice stem borers damage rice plants by tunneling into the stems and feeding on the inner tissues. This feeding activity weakens the stems, reducing the plant's ability to stand upright. As a result, the rice plants may lodge (fall over), leading to reduced grain filling and yield loss.\n\n"
+            android:text="@string/stemborerContent3"
             />
 
 
