@@ -18,7 +18,7 @@
             android:textSize="14pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pagpili sa Binhi"
+            android:text="@string/title_card1"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -29,7 +29,7 @@
             android:textSize="11pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gamit sa rekomendation matang sa &quot;Certified seeds&quot;"
+            android:text="@string/content_card1.2"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
@@ -52,7 +52,7 @@
             android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Ang Binhi sa mas gipalambo nga matang sa humay nga sertipikado sa &quot;National Seed Quality Control Services&quot;(NCSQCS) ma-ilhan o mapamatud-an kini pinaagi sa asul nga tarheta (tag) nga nasukip o gipalit sa sako. Mahimo usab nga mogamit sa &quot;Foundation o registered seeds&quot; gikan sa masaligan nga mga ahensya sama sa PhilRice ug mga akreditadong magbibinhi"
+            android:text="@string/content_card1.3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_marginHorizontal="20dp"/>
 
@@ -65,7 +65,7 @@
             android:layout_marginTop="15dp"
             android:gravity="start"
             android:layout_marginHorizontal="20dp"
-            android:text="Mga kinaiya sa sertipikasyong binhi"
+            android:text="@string/title_card1.4"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
@@ -78,7 +78,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="•Limpyo og walay sagol o puro. \n•Tibook o parehas ang porma ug gidagkuon sa mga lugas. \n•85 porsyento o labaw pa ang &quot;germination rate&quot; o gidaghanon sa moturok."
+            android:text="@string/content_card1.5"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <TextView
@@ -89,7 +89,7 @@
             android:layout_below="@+id/textView5"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Kamahinungdanon"
+            android:text="@string/title_card1.6"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
@@ -102,7 +102,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Ang paggamit sa sertipikadong binhi moresulta sa himsong nga mga tagod nga paspas ug tupong ang pagtubo. Makatabang kini sa pagpadugang sa abot sa humay og mga 5-10 porsyento."
+            android:text="@string/content_card1.7"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <TextView
@@ -113,7 +113,7 @@
             android:layout_below="@+id/textView7"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Mga Rekomendasyon"
+            android:text="@string/title_card1.8"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
@@ -126,7 +126,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum (&quot;technology demonstration&quot; o &quot;adaptability trial&quot;) sa inyong lugar. \n\nMagtanum ug mga matang sa humay nga dali lang mugulang o kadtong makalahutay bisan mahumol sa tubig didto sa mga ubos nga lugar ug sagad gibnabaha panahon sa ting-ulan.\n\nAng mga barayti nga angay itanum ngadto sa ubos nga lugar ug adunay patubig mao ang: PSB Rc10 (Pagsanjan), NSIC Rc130 (Tubigan 3), NSIC Rc152 (Tubigan 10), NSIC Rc134 (Tubigan 4) ug NSIC Rc160 (Tubigan 14).\n\nAlang sa ubos nga lugar nga nagasalig sa tubig-ulan: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). Kini nga mga barayti sa humay makasugakod usab sa hulaw. /n/n Alang ngadto sa upland o mga taas nga lugar nga sagad makasinati ug hulaw: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan).\n\n\n"
+            android:text="@string/content_card1.9"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </RelativeLayout>
 </ScrollView>

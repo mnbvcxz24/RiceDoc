@@ -73,4 +73,83 @@
 \n\n• Biological Control: Introduce natural predators and parasites of the green leafhopper, such as spiders and predatory insects, to help control their population naturally.</string>
     <string name="tungroContent3">Infected plants typically show stunted growth, reduced tillering, and smaller panicles.
         This leads to a significant decrease in the overall rice yield per hectare.\n\n</string>
+
+    //Activity_book_card1
+    <string name="title_card1.1">Seed Selection</string>
+    <string name="content_card1.2">Using the recommendation type of &quot;Certified seeds&quot;</string>
+    <string name="content_card1.3">Seeds of improved varieties of rice certified by the &quot;National Seed Quality Control Services&quot;(NCSQCS) can be identified or verified through a blue card (tag) that packed or bought in a bag. Can also use &quot;Foundation or registered seeds&quot; from reliable agencies like PhilRice and accredited growers</string>
+    <string name="title_card1.4">Characteristics of seed certification</string>
+    <string name="content_card1.5">•Clean and unadulterated or pure. \n•The grains are round or uniform in shape and size. \n•85 percent or more the &quot;germination rate&quot; or number of sprouts.</string>
+    <string name="title_card1.6">Importance</string>
+    <string name="content_card1.7">The use of certified seeds results in healthy plants that grow quickly and evenly. This will help to increase the yield of rice by about 5-10 percent.</string>
+    <string name="title_card1.8">Recommendations</string>
+    <string name="content_card1.9">Using a range type that has high yield potential, is available in the market (by traders/NFA), and is already undergoing plant testing ("technology demonstration" or &quot;adaptability trial&quot;) in your area. \n\nPlant varieties of rice that are easy to grow old or those that can withstand being soaked in water in low-lying areas and are often flooded during the rainy season.\n\nThe varieties that should be planted in low-lying areas and with irrigation are: PSB Rc10 (Pagsanjan), NSIC Rc130 (Water 3), NSIC Rc152 (Water 10), NSIC Rc134 (Water 4) and NSIC Rc160 (Water 14). rainwater: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). These rice varieties are also drought resistant. /n/n For upland or high areas that often experience drought: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan).\n\n\n</string>
+
+    //Activity_book_card2
+    <string name="title_card2.1">Field Preparation</string>
+    <string name="content_card2.2">It is necessary that in the final leveling of the ground, there is no place that is too deep or shallow (The leveling of the land is the same.)</string>
+    <string name="content_card2.3">During the leveling of the soil in the wetland, the depth of the water should be 2-5 centimeters. (Almost the width of the thumb of the hand.) There should be no visible soil that is compacted in the final leveling.</string>
+    <string name="title_card2.4">Importance</string>
+    <string name="content_card2.5">Good leveling of the wetland helps for proper and economical irrigation management, and also makes it easier to manage weeds and snails.</string>
+    <string name="title_card2.6">Recommendations</string>
+    <string name="content_card2.7">• Repair and clean the ditches and embankments.\n\n• Plow the weeds and harvest or plow. Water the wetland twice or more (one week apart each time).\n\n• Flatten the soil.\n\n</string>
+
+    //Activity_book_card3
+    <string name="title_card3.1">Planting</string>
+    <string name="content_card3.2">A. Perform simultaneous planting after the soil has rested</string>
+    <string name="content_card3.3">The wetland should be rested for about 30 days or more. It must also be planted within 14 days, before, and after, the common wetland belonging to the irrigation system is planted.</string>
+    <string name="title_card3.4">Importance</string>
+    <string name="content_card3.5">Through simultaneous planting, continuous breeding or multiplication of rice pests and diseases can be avoided. A month of resting in the wetland can interrupt the life cycle of fleas or insects and cause damage to disease habitats.</string>
+    <string name="title_card3.6">Recommendations</string>
+    <string name="content_card3.7">• Rest or do not cultivate the wetland for a month or more, from harvest, until the next crop.\n\n• Plant rice at the same time as plant rice in the neighboring rice fields in your area.</string>
+    <string name="content_card3.7.5">B. There should be a sufficient number of healthy cells.</string>
+    <string name="title_card3.8">Transplanted</string>
+    <string name="content_card3.9">Replant the dead plants (within 7 days of transplanting there should be 150 healthy plants, each square meter, while the rice field sown with 80 kilograms of seeds, there should be 300 or more, healthy plants, every one square meter of land.</string>
+    <string name="title_card3.10">Importance</string>
+    <string name="content_card3.11">Healthy plants grow quickly and can compete with weeds.</string>
+    <string name="title_card3.12">Recommendations</string>
+    <string name="content_card3.13">• Build a shelter near a water source, and protect it against vermin, especially against birds, snails and rats. The facility must also have a well-developed drainage system to facilitate the drainage of water.\n\n• For sowing seeds. The field is ready to be sown with pre-planted seeds after plowing and harvesting. The sown seeds must be protected against birds, snails, rodents and weeds, following the correct method of managing the weeds. Sow the pre-sown seeds, in equal quantities, (per plot), in well-prepared and leveled soil.\n\n </string>
+
+    //Activity_book_card4
+    <string name="title_card4.1">Nutrient management</string>
+    <string name="content_card4.2">Plants must have enough nutrients during the period of fertilization until &quot;conception&quot; and to bloom</string>
+    <string name="content_card4.3">From objection to &quot;conceived&quot; and flowering, sprinkle with nitrogen fertilizer (1.5 bags of Urea per hectare in the summer, and one bag of urea per hectare in the rainy season), If the result of reading the &quot;LCC&quot; or &quot;leaf Color Chart&quot; less than four, for transplanted plants, and three for sown plants.</string>
+    <string name="title_card4.4">Transplanted</string>
+    <string name="content_card4.5">During the flowering period, there should be 300 ears or more, per square meter of wetland.</string>
+    <string name="title_card4.6">Plant sowing</string>
+    <string name="content_card4.7">During the flowering period, there should be about 350 ears or more, per square meter of wetland.</string>
+    <string name="title_card4.8">Importance</string>
+    <string name="content_card4.9">Getting enough nutrients from conception to &quot;conception&quot; and budding, helps for the good growth of rice, creating ears, and achieving the highest yield, according to the type of rice. The number of ears can be the basis of the number of harvests.</string>
+    <string name="title_card4.10">Recommendations</string>
+    <string name="content_card4.11">•Assess and provide the plant with this nitrogen requirement based on what is read in the LCC, as well as other nutrients required by the rice according to the MOET or the &quot;Nutrient Ommision Plot .&quot;\n\n•Nitrogen(N). Use LCC every seven days from 14 days after transplanting or about 21 days from seeding, until it blooms or blooms. However, if spraying a complete fertilizer or 14-14-14-12S on the 14th day after transplanting, or 21 days after sowing, the LCC reading should be started on the 21st day. after transplanting, or on the 28th day after sowing.\n\n•Phosphorus(P) and Potassium(K). The amount and type of fertilizer containing Pk and K, such as 14-14-14-12S, 16-20-0, 0-18-0, and 0-0-60 to be used, depends on the time of planting. , type of land, targeted yield, price, and its availability.\n\n•Sulfur(S). The amount of sulfur contained in 14-14-14-12S (12%) recommended in Table 2 is sufficient to meet the deficiency of sulfur.\n\n•Zinc(Zn). If zinc is lacking, use or add 25 kilograms of &quot;zinc sulfate&quot; per hectare, on the 14th day from transplanting. It will only be done once a year. Zinc, one of the types of &quot;micronutrient&quot; which is often lacking in wetlands. Symptoms of its deficiency will be noticed 2-4 weeks after transplanting.\n\n</string>
+
+    //Activity_book_card5
+    <string name="title_card5.1">Irrigation Management</string>
+    <string name="content_card5.2">It is necessary to avoid excess or insufficient water that affects the growth of rice</string>
+    <string name="content_card5.3">There should be no visible symptoms of overwatering while the rice is growing, such as few spikes and small leaves. Irrigation can be considered excessive if the minimum depth of the wetland is more than 5 centimeters for seven days or more.\n\nThere should also be no visible symptoms of insufficient irrigation, such as curling of the leaves (leaf rolling). , leaf tip drying, stunted growth, fewer ears, many seeds without flesh, from the time of growth, 'breeding,' until having fleshy grains .</string>
+    <string name="title_card5.5">Importance</string>
+    <string name="content_card5.6">Water carries nutrients from the soil to different parts of the plant. Proper irrigation results in healthy plants, with beautiful blossoms, normal growth, and large yields.</string>
+    <string name="title_card5.7">Recommendations</string>
+    <string name="content_card5.8">•The depth of water in the wetland should be about 3.5 centimeters, from the time of planting until about 1-2 weeks before harvesting. Drain wetlands 1-2 weeks before harvest.\n\n•For 'galas' soils, Drain wetlands about a week before harvest.\n\n•However on soils that are 'sticky' or muddy, drain the wetland about two weeks before harvest.\n\n</string>
+
+    //Activity_book_card6
+    <string name="title_card6.1">Managing Processes</string>
+    <string name="content_card6.2">The harvest should not be reduced because of the weather</string>
+    <string name="content_card6.3">The harvest should not decrease due to diseases, diseases, weeds, mice and birds. The damage that can be done by any of these factors is great.</string>
+    <string name="title_card6.4">Importance</string>
+    <string name="content_card6.5">The management of rice fields is an important part of rice cultivation. The information about the relationship or interaction of rice and the creatures (with life) that can affect its growth (biotic factors), environment (agro-ecosystem), and methods or systems of plant cultivation, will surely help in determining the ability of weeds to cause damage to rice fields.</string>
+    <string name="title_card6.6">Recommendations</string>
+    <string name="content_card6.7">•Choose to plant varieties of rice that have high resistance against diseases that are common in your area.\n\n•Protect (take care of) those who help. or beneficial organisms.\n\n•Conduct regular inspection of rice fields and control rice pests such as insects, diseases, weeds, rodents, snails, and birds. It is best if the entire barangay or community cooperates in conducting this.\n\n</string>
+
+    //Activity_book_card7
+    <string name="title_card7.1">Seed Selection</string>
+    <string name="content_card7.2">See and harvest the rice at the right time</string>
+    <string name="content_card7.3">Rice is ripe when 20 percent of the grains at the end of the ear are rock hard, or when most of the grains in the ear are golden.\n\n \nYou can tell if the rice grains are hard by squeezing them with your thumb.</string>
+    <string name="title_card7.4">Importance</string>
+    <string name="content_card7.5">Proper harvesting and threshing results in quality rice grains, and they can be sold at a high price in the market.</string>
+    <string name="title_card7.6">Recommendations</string>
+    <string name="content_card7.7">•The rice is ready when 80% of the grains are golden or when only 20-25 percent of the moisture content or &quot;moisture content&quot; of this, in the rainy season and 18-21% in the summer.\n\n•It is suggested to use a &quot;grain moisture meter&quot;\n\n•The rice is soaked for a period not exceeding one days from harvesting during the rainy season, and not more than two days, during the hot season.\n\n•Make sure that the thresher is clean and that the &quot;settings&quot; this</string>
+    <string name="title_card7.8">Rice drying</string>
+    <string name="content_card7.9">Dry wet rice within 24 hours after harvesting to prevent it from turning black. Here are the methods you can choose to dry rice: \n\n•Blow it in the sun, or not,\n\n•Use a mechanical facility such as a Flat Bed Dryer (FBD) especially during the dry season. rain. The FBD has the capacity to dry 120 sacks of rice in 10 to 12 hours. If using FBD, be sure to follow the correct drying time so that it does not result in low quality rice grains.\n\n</string>
+
 </resources>

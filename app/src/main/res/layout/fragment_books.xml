@@ -60,7 +60,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint1"
                         android:gravity="center"
-                        android:text="Pagpili sa Binhi"
+                        android:text="@string/title_card1.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -124,7 +124,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint2"
                         android:gravity="center"
-                        android:text="Pag-andam sa uma"
+                        android:text="@string/title_card2.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -187,7 +187,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint3"
                         android:gravity="center"
-                        android:text="Pagtanum"
+                        android:text="@string/title_card3.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -251,7 +251,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint4"
                         android:gravity="center"
-                        android:text="Pagdumala sa Sustansya"
+                        android:text="@string/title_card4.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -314,7 +314,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint5"
                         android:gravity="center"
-                        android:text="Pagdumala sa Tubig"
+                        android:text="@string/title_card5.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -378,7 +378,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint6"
                         android:gravity="center"
-                        android:text="Pagdumala sa mga Dangan"
+                        android:text="@string/title_card6.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 
@@ -442,7 +442,7 @@
                         android:layout_marginEnd="17dp"
                         android:layout_toRightOf="@id/centerpoint7"
                         android:gravity="center"
-                        android:text="Pagdumala sa Ani"
+                        android:text="@string/title_card7.1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:textStyle="bold" />
 

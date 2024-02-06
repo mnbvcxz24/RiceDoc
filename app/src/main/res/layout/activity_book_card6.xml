@@ -20,7 +20,7 @@
             android:textSize="14pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pagdumala sa mga Dangan"
+            android:text="@string/title_card6.1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textStyle="bold"
@@ -36,7 +36,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="20dp"
             android:layout_centerHorizontal="true"
-            android:text="Kinahanglan dili momenos ang ani tungod sa dangan"
+            android:text="@string/content_card6.2"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <ImageView
@@ -56,7 +56,7 @@
             android:layout_below="@+id/imageView"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Kinahanglan dili momenos ang ani tungod sa mga dangan, sakit, sagbot, ilaga ug langgam. Daku ang kadaut nga mahimo bisan asa niining nahisgutan nga mga hinungdan."
+            android:text="@string/content_card6.3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 
@@ -68,7 +68,7 @@
             android:layout_below="@+id/textView3"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="15dp"
-            android:text="Kamanghinungdanon"
+            android:text="@string/title_card6.4"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"/>
 
@@ -80,7 +80,7 @@
             android:layout_below="@+id/textView4"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Ang pagdumala sa mga dangan usa ka mahinungdanon bahin sa pagbasakan o pagpanguma og humay. Ang kasayuran mahitungod sa kalambigitan o inter-aksyon sa humay ug sa mga linalang (nga adunay kinabuhi) nga maka-apekto sa pagtubo niini (biotic factors), palibot (agro-ecosystem), ug pamaagi o sistema sa pag-galam sa tanum, seguradong makatabng sa pagdeterminar sa katakus sa mga dangan nga mohimo'g kadaut sa humayan."
+            android:text="@string/content_card6.5"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -91,7 +91,7 @@
             android:layout_below="@+id/textView5"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="Mga Rekomendasyon"
+            android:text="@string/title_card6.6"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
@@ -103,7 +103,7 @@
             android:layout_below="@+id/textView6"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="20dp"
-            android:text="•Pili-a nga itanum ang mga matang sa humay nga taas ang resistensya batok sa mga dangan ug sakit nga kasagaran diha sa imong lugar.\n\n•Panalipdi (alagaan) ang mga makatabang o mapuslanon nga mga organismo.\n\n•Ipahigayon ang regular nga pagsusi sa humayan ug sumpoa ang mga dangan sa humay sama sa insekto, sakit, mga sagbot, ilaga, kuhol, ug mga langgam. Labing maayo kung tibook barangay o kumunidad ang magtinabangay sa pagpahigayon niini.\n\n"
+            android:text="@string/content_card6.7"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </RelativeLayout>
 </ScrollView>
