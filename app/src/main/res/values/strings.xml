@@ -19,7 +19,8 @@
             \n\n• Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
 \n\n• Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
 \n\n• Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle.</string>
-<string name="LeafblastContent3">Blast infection can lead to significant yield losses, sometimes up to 30-50% or even complete crop failure in severe cases. This can directly affect food security in regions where rice is a staple food.\n\n</string>
+    <string name="LeafblastContent3">Blast infection can lead to great loss, there is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.3 (if the damage is at 30%) or 0.5 (if the damage is at 50%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //sheathblight
     <string name="sheathblightContent1">Rice sheath blight, caused by the fungus Rhizoctonia solani, is a significant disease that affects rice production worldwide.</string>
@@ -28,7 +29,8 @@
             \n\n• Fungicide Timing: If the disease pressure is high and cultural practices alone are insufficient, consider applying fungicides. Timing is crucial; apply fungicides during the early stages of the disease when symptoms first appear.
 \n\n• Biocontrol Agents: Some beneficial microorganisms, such as Trichoderma spp., have been found to be effective in suppressing rice sheath blight. These can be applied as biocontrol agents.
 \n\n• Improving Drainage:Ensure proper field drainage to prevent waterlogged conditions, which can favor the development of sheath blight.</string>
-    <string name="sheathblightContent3">One of the most significant impacts of rice sheath blight is a reduction in yield. The disease affects the photosynthetic area of the rice plant, leading to poor grain filling and reduced kernel weight. Yield losses can range from 10% to 50% or more, depending on the severity of the infection and the stage of crop development when the disease strikes.\n\n</string>
+    <string name="sheathblightContent3">One of the most significant effects of rice sheath blight is yield reduction. The disease affects the photosynthetic area of the rice plant, leading to poor grain filling and reduced kernel weight. There is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.5 (if the damage is at 50%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //brownspot
     <string name="brownspotContent1">Rice brown spot, caused by the fungus Bipolaris oryzae, is a common disease affecting rice plants. Its impacts on production can be significant and varied, depending on the severity of the infection, the rice variety,
@@ -38,8 +40,9 @@
             \n\n• Seed Treatment: Use disease-free, certified seeds and treat them with fungicides or hot water to reduce the risk of introducing the pathogen into the field through infected seeds.
 \n\n• Proper Irrigation: Avoid excessive or continuous flooding, as this can create favorable conditions for the disease. Use intermittent or alternate wetting and drying (AWD) irrigation practices to reduce disease incidence.
 \n\n• Fungicides: When the disease reaches damaging levels, chemical control may be necessary. Fungicides containing active ingredients like azoxystrobin, propiconazole, or tricyclazole are effective against rice brown spot. Follow the recommended application rates and timing provided on the product label.</string>
-    <string name="brownspotContent3">Brown spot affects the photosynthetic capacity of the leaves, leading to reduced grain filling and ultimately decreased yield. Severe infections can cause significant yield losses, sometimes up to 50% or more.\n\n</string>
-
+    <string name="brownspotContent3">Brown spot affects the photosynthetic capacity of leaves, leading to reduced grain filling and ultimately reduced yield. There is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.5 (if the damage is at 50%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
+    
     //leaffolder
     <string name="leaffolderContent1">The rice leaffolder (Cnaphalocrocis medinalis) is a significant pest that affects rice production.
         Its impact can be quite detrimental, leading to reduced crop yields and economic losses.</string>
@@ -49,8 +52,9 @@
 \n\n• Plant Resistant Rice Varieties: Plant rice varieties that are resistant or tolerant to leaffolder damage. Resistant varieties can significantly reduce the impact of the pest on crop yields.
 \n\n• Insecticide Application: If leaffolder populations are high and other control methods are insufficient, targeted insecticide applications can be considered.
         Consult with local agricultural extension services or entomologists to choose the right insecticide and application method.</string>
-    <string name="leaffolderContent3">The primary impact of rice leaffolder infestation is a decrease in rice yields. Larvae of this pest feed on the green tissues of rice plants, including leaves, stems, and panicles. This feeding damage can reduce the plants ability to photosynthesize,
-        leading to stunted growth and lower grain production.\n\n</string>
+    <string name="leaffolderContent3">The main effect of rice leaf litter is the reduction of rice yield. The larvae of this pest feed on the green tissues of rice plants, including leaves, stems, and ears. This feeding damage reduces the ability of plants to photosynthesize,
+          leading to stunted growth and reduced grain production. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //stemborer
     <string name="stemborerContent1">Rice stem borers are a group of insect pests that can have significant negative impacts on rice production. These pests belong to various species of moths and beetles, with the larvae (caterpillars) being the primary culprits.
@@ -61,8 +65,9 @@
 \n\n• Integrated Pest Management (IPM): Implement an IPM approach, combining various control methods judiciously to minimize the use of chemical pesticides and reduce the impact on non-target organisms and the environment.
 \n\n• Proper Application: If pesticides are necessary, apply them at the recommended dosage and timing.
         Follow safety guidelines and local regulations regarding pesticide use.</string>
-    <string name="stemborerContent3">Rice stem borers damage rice plants by tunneling into the stems and feeding on the inner tissues. This feeding activity weakens the stems, reducing the plant\&quot;s ability to stand upright. As a result, the rice plants may lodge (fall over),
-        leading to reduced grain filling and yield loss.\n\n</string>
+    <string name="stemborerContent3">Rice stem borers damage rice plants by tunneling through the stems and feeding on the inner tissues. This feeding activity weakens the stems, reducing the plants ability to stand upright. As a result, rice plants can be straightened (fall over),
+          leading to reduced grain filling and yield loss. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //tungro
     <string name="tungroContent1">Rice tungro disease is a viral disease that affects rice plants. It is caused by the rice tungro spherical virus (RTSV) and the rice tungro bacilliform virus (RTBV),
@@ -73,7 +78,8 @@
 \n\n• Insecticide Application: Proper and timely application of insecticides can help control the green leafhopper population, which is responsible for transmitting the virus. Consult with agricultural experts or entomologists for advice on suitable insecticides and their application schedules.
 \n\n• Biological Control: Introduce natural predators and parasites of the green leafhopper, such as spiders and predatory insects, to help control their population naturally.</string>
     <string name="tungroContent3">Infected plants typically show stunted growth, reduced tillering, and smaller panicles.
-        This leads to a significant decrease in the overall rice yield per hectare.\n\n</string>
+         This leads to a significant decrease in the overall rice yield per hectare. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
+\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //Activity_book_card1
     <string name="title_card1.1">Seed Selection</string>

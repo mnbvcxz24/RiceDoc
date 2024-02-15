@@ -20,7 +20,8 @@
             \n\n• Mga Fungicide: Ang mga fungicide mahimong gamiton sa pagdumala sa Leaf blast. Bisan pa, ang ilang paggamit kinahanglan nga mabinantayon aron mapugngan ang pag-uswag sa mga lahi nga resistensya sa fungicide. Pagkonsulta sa lokal nga serbisyo sa pagpalawig sa agrikultura alang sa girekomenda nga fungicide ug mga pamaagi sa paggamit.
 \n\n• Scouting: Kanunay nga bantayan ang imong mga umahan alang sa mga timailhan sa Leaf blast. Ang sayo nga pag-ila nagtugot sa tukma sa panahon nga interbensyon ug makapugong sa pagdaghan sa sakit.
 \n\n• Pagdumala sa Residue: Sakto nga ilabay ang mga salin sa ani pagkahuman ani. Ang nataptan nga tanum nga materyal nga nahabilin sa uma mahimong magtago sa fungus ug makatampo sa cycle sa sakit.</string>
-    <string name="LeafblastContent3">Blast infection mahimong mosangpot sa dakong kapildihan sa abot, usahay hangtod sa 30-50% o bisan sa bug-os nga kapakyasan sa ani sa grabeng mga kaso. Mahimo kining direktang makaapekto sa seguridad sa pagkaon sa mga rehiyon diin ang bugas usa ka pangunang pagkaon.\n\n</string>
+    <string name="LeafblastContent3">Blast infection mahimong mosangpot sa dakong kapildihan , dunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.3 (kung ang danyos kay anaa sa 30%) or 0.5 (kung ang danyos anaa sa 50%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
     //sheathblight
     <string name="sheathblightContent1">Rice sheath blight, tungod sa fungus nga Rhizoctonia solani, usa ka mahinungdanong sakit nga makaapekto sa produksyon sa humay sa tibuok kalibutan.</string>
@@ -29,7 +30,8 @@
             \n\n• Tayming sa Fungicide: Kung taas ang presyur sa sakit ug dili igo ang mga kultural nga praktis, ikonsiderar ang paggamit ug fungicide. Ang panahon hinungdanon; pagbutang og fungicide sa unang mga hugna sa sakit sa diha nga ang mga simtomas unang makita.
 \n\n• Mga Ahente sa Pagkontrol sa Bio: Ang ubang mga mapuslanon nga mikroorganismo, sama sa Trichoderma spp., nakit-an nga epektibo sa pagsumpo sa rice sheath blight. Mahimo kining gamiton isip mga ahente sa biocontrol.
 \n\n• Pag-ayo sa Drainage: Siguruha ang husto nga kanal sa umahan aron malikayan ang mga kahimtang sa tubig, nga mahimong pabor sa pag-uswag sa sheath blight.</string>
-    <string name="sheathblightContent3">Usa sa labing mahinungdanong epekto sa rice sheath blight mao ang pagkunhod sa ani. Ang sakit makaapekto sa photosynthetic nga lugar sa tanum nga humay, nga mosangpot sa dili maayo nga pagpuno sa lugas ug pagkunhod sa timbang sa kernel. Ang pagkawala sa abot mahimong gikan sa 10% ngadto sa 50% o labaw pa, depende sa kagrabe sa impeksyon ug sa yugto sa paglambo sa tanum kung ang sakit moigo.\n\n</string>
+    <string name="sheathblightContent3">Usa sa labing mahinungdanong epekto sa rice sheath blight mao ang pagkunhod sa ani. Ang sakit makaapekto sa photosynthetic nga lugar sa tanum nga humay, nga mosangpot sa dili maayo nga pagpuno sa lugas ug pagkunhod sa timbang sa kernel. Adunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.1 (kung ang danyos kay anaa sa 10%) or 0.5 (kung ang danyos anaa sa 50%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
     //brownspot
     <string name="brownspotContent1">Rice brown spot, tungod sa fungus nga Bipolaris oryzae, maoy kasagarang sakit nga nakaapekto sa mga tanom nga humay. Ang mga epekto niini sa produksiyon mahimong mahinungdanon ug lainlain, depende sa kagrabe sa impeksyon, sa matang sa humay,
@@ -39,7 +41,8 @@
              \n\n• Pagtambal sa Binhi: Gamita ang walay sakit, sertipikado nga mga liso ug atimana kini gamit ang fungicide o init nga tubig aron mamenosan ang risgo sa pagpasulod sa pathogen ngadto sa uma pinaagi sa nataptan nga mga liso.
 \n\n• Tukma nga Irigasyon: Likayi ang sobra o padayon nga pagbaha, kay makamugna kini og paborableng kondisyon alang sa sakit. Gamita ang intermittent o alternate wetting and drying (AWD) nga mga pamaagi sa irigasyon aron makunhuran ang insidente sa sakit.
 \n\n• Mga Fungicide: Kung ang sakit makaabot sa makadaot nga lebel, mahimo’g kinahanglan ang pagpugong sa kemikal. Ang mga fungicide nga adunay mga aktibong sangkap sama sa azoxystrobin, propiconazole, o tricyclazole epektibo batok sa rice brown spot. Sunda ang girekomenda nga mga rate sa aplikasyon ug oras nga gihatag sa label sa produkto.</string>
-    <string name="brownspotContent3">Ang brown spot makaapekto sa photosynthetic nga kapasidad sa mga dahon, nga mosangpot sa pagkunhod sa pagpuno sa lugas ug sa katapusan pagkunhod sa ani. Ang grabe nga mga impeksyon mahimong hinungdan sa daghang pagkawala sa ani, usahay hangtod sa 50% o labaw pa.\n\n</string>
+    <string name="brownspotContent3">Ang brown spot makaapekto sa photosynthetic nga kapasidad sa mga dahon, nga mosangpot sa pagkunhod sa pagpuno sa lugas ug sa katapusan pagkunhod sa ani. Adunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.1 (kung ang danyos kay anaa sa 10%) or 0.5 (kung ang danyos anaa sa 50%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
     //leaffolder
     <string name="leaffolderContent1">Ang rice leaffolder (Cnaphalocrocis medinalis) usa ka mahinungdanong peste nga makaapekto sa produksyon sa humay.
@@ -51,7 +54,8 @@
 \n\n• Pag-aplikar sa Insecticide: Kung daghan ang populasyon sa mga dahon ug ang ubang mga pamaagi sa pagkontrol dili igo, ang gipunting nga mga aplikasyon sa insecticide mahimong makonsiderar.
          Pagkonsulta sa lokal nga serbisyo sa pagpalawig sa agrikultura o mga entomologist aron mapili ang husto nga insecticide ug pamaagi sa aplikasyon.</string>
     <string name="leaffolderContent3">Ang nag-unang epekto sa pagdagmal sa mga dahon sa humay mao ang pagkunhod sa abot sa humay. Ang mga ulod niini nga peste mokaon sa berde nga mga tisyu sa mga tanum nga humay, lakip ang mga dahon, mga punoan, ug mga uhay. Kini nga kadaot sa pagpakaon makapakunhod sa abilidad sa mga tanum sa photosynthesize,
-         mitultol sa pagkahinay sa pagtubo ug pagkunhod sa produksyon sa lugas.\n\n</string>
+         mitultol sa pagkahinay sa pagtubo ug pagkunhod sa produksyon sa lugas. adunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.1 (kung ang danyos kay anaa sa 10%) or 0.3 (kung ang danyos anaa sa 30%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
     //stemborer
     <string name="stemborerContent1">Ang rice stem borers usa ka grupo sa mga peste sa insekto nga mahimong adunay dakong negatibong epekto sa produksiyon sa humay. Kini nga mga peste iya sa lain-laing klase sa mga anunugba ug bakukang, diin ang mga ulod (mga hantatalo) mao ang nag-unang hinungdan.
@@ -63,7 +67,8 @@
 \n\n• Tukma nga Paggamit: Kung gikinahanglan ang mga pestisidyo, ibutang kini sa girekomendar nga dosis ug timing.
          Sunda ang mga giya sa kaluwasan ug mga lokal nga regulasyon bahin sa paggamit sa pestisidyo.</string>
     <string name="stemborerContent3">Ang rice stem borers makadaot sa mga tanom sa humay pinaagi sa pag-tunnel sa mga punoan ug pagpakaon sa sulod nga mga tisyu. Kini nga kalihokan sa pagpakaon makapahuyang sa mga punoan, nga makapakunhod sa katakus sa tanum sa pagbarug nga tul-id. Ingon usa ka sangputanan, ang mga tanum nga humay mahimo’g matul-id (matumba),
-         mitultol sa pagkunhod sa pagpuno sa lugas ug pagkawala sa abot.\n\n</string>
+         mitultol sa pagkunhod sa pagpuno sa lugas ug pagkawala sa abot.  adunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.1 (kung ang danyos kay anaa sa 10%) or 0.3 (kung ang danyos anaa sa 30%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
     //tungro
     <string name="tungroContent1">Ang sakit nga tungro sa bugas usa ka sakit nga viral nga nakaapekto sa mga tanum nga humay. Kini tungod sa rice tungro spherical virus (RTSV) ug rice tungro bacilliform virus (RTBV),
@@ -74,7 +79,8 @@
 \n\n• Paggamit sa Insecticide: Ang husto ug tukma sa panahon nga paggamit sa mga insecticides makatabang sa pagkontrolar sa populasyon sa berdeng leafhopper, nga maoy responsable sa pagpasa sa virus. Konsultaha ang mga eksperto sa agrikultura o entomologist alang sa tambag sa angay nga mga pamatay-insekto ug sa ilang mga iskedyul sa aplikasyon.
 \n\n• Biological Control: Ipaila ang natural nga mga manunukob ug mga parasito sa green leafhopper, sama sa mga kaka ug manunukob nga mga insekto, aron makatabang sa pagkontrolar sa ilang populasyon sa natural nga paagi.</string>
     <string name="tungroContent3">Ang mga nataptan nga tanum kasagarang nagpakita sa pagkahinay sa pagtubo, pagkunhod sa pag-ani, ug gagmay nga mga uhay.
-         Nagresulta kini sa dakong pagkunhod sa kinatibuk-ang abot sa humay kada ektarya.\n\n</string>
+         Nagresulta kini sa dakong pagkunhod sa kinatibuk-ang abot sa humay kada ektarya.    adunay formula sa pag compute aron makuha ang gibana bana nga danyos sa maong sakit kung maka epekto kini sa tanom. damage = area planted(ha) x 0.1 (kung ang danyos kay anaa sa 10%) or 0.3 (kung ang danyos anaa sa 30%)
+\n\n <b>DISCLAIMER:</b> ang kaning maong computation base ra kini sa gihatag ni City Agricultural Office (CAGRO) nga estimation sa maong danyos. ubang kasayuran sa pamaagi sa pag compute mamahimo kini ipangutana sa mga experto.\n\n</string>
 
 
     //Activity_book_card1
