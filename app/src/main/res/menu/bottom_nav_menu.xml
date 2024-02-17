@@ -15,4 +15,9 @@
         android:id="@+id/books"
         android:icon="@drawable/baseline_library_books_24"
         />
+    <item
+        android:title="Recent Scan"
+        android:id="@+id/history"
+        android:icon="@drawable/baseline_history_24"
+        />
 </menu>

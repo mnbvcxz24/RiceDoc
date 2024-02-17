@@ -2,7 +2,26 @@
 <resources>
     <string name="app_name">RiceDoc</string>
     <string name="home_text">Home</string>
-    <string name="lang">En</string>
+    <string name="books_text">Books</string>
+    <string name="history_text">History</string>
+    <string-array name="barangay">
+        <item>Manay</item>
+        <item>Southern Davao</item>
+        <item>Nanyo</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string name="lang">EN</string>
     <string name="phase1">Take a picture</string>
     <string name="phase2">Get a result</string>
     <string name="phase3">Get diagnosis</string>
@@ -42,7 +61,7 @@
 \n\n• Fungicides: When the disease reaches damaging levels, chemical control may be necessary. Fungicides containing active ingredients like azoxystrobin, propiconazole, or tricyclazole are effective against rice brown spot. Follow the recommended application rates and timing provided on the product label.</string>
     <string name="brownspotContent3">Brown spot affects the photosynthetic capacity of leaves, leading to reduced grain filling and ultimately reduced yield. There is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.5 (if the damage is at 50%)
 \n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-    
+
     //leaffolder
     <string name="leaffolderContent1">The rice leaffolder (Cnaphalocrocis medinalis) is a significant pest that affects rice production.
         Its impact can be quite detrimental, leading to reduced crop yields and economic losses.</string>
@@ -158,5 +177,6 @@
     <string name="content_card7.7">•The rice is ready when 80% of the grains are golden or when only 20-25 percent of the moisture content or &quot;moisture content&quot; of this, in the rainy season and 18-21% in the summer.\n\n•It is suggested to use a &quot;grain moisture meter&quot;\n\n•The rice is soaked for a period not exceeding one days from harvesting during the rainy season, and not more than two days, during the hot season.\n\n•Make sure that the thresher is clean and that the &quot;settings&quot; this</string>
     <string name="title_card7.8">Rice drying</string>
     <string name="content_card7.9">Dry wet rice within 24 hours after harvesting to prevent it from turning black. Here are the methods you can choose to dry rice: \n\n•Blow it in the sun, or not,\n\n•Use a mechanical facility such as a Flat Bed Dryer (FBD) especially during the dry season. rain. The FBD has the capacity to dry 120 sacks of rice in 10 to 12 hours. If using FBD, be sure to follow the correct drying time so that it does not result in low quality rice grains.\n\n</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

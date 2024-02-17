@@ -281,7 +281,7 @@ public class HomeFragment extends Fragment {
         Intent loadingIntent = new Intent(requireContext(), LoadingScreen.class);
 
         loadingIntent.putExtra("imageByteArray", byteArray);
-        loadingIntent.putExtra("text", result);
+        loadingIntent.putExtra("disease", result);
         loadingIntent.putExtra("confident_key", conPercentage);
         startActivity(loadingIntent);
     }

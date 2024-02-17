@@ -2,12 +2,31 @@
 <resources>
     <string name="app_name">RiceDoc</string>
     <string name="home_text">Home</string>
-    <string name="lang">Ceb</string>
+    <string name="books_text">Libro</string>
+    <string name="history_text">History</string>
+    <string-array name="barangay">
+        <item>Manay</item>
+        <item>Southern Davao</item>
+        <item>Nanyo</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string name="lang">CEB</string>
     <string name="phase1">Pagkuha og picture</string>
     <string name="phase2">Kuhaa ang result</string>
     <string name="phase3">Kuhaa ang diagnosis</string>
     <string name="camera">Kamera</string>
-    <string name="image">hulagway</string>
+    <string name="image">Hulagway</string>
 
     <string name="AboutDisease">Mahitungod sa sakit</string>
     <string name="treatment">Pagtambal</string>
@@ -160,5 +179,5 @@
     <string name="content_card7.7">•Aniha ang humay kung kolor bulawan (golden) na ang 80% sa mga lugas o kung mga 20-25 porsyento na lamang ang gihuptan nga kabasaon o &quot;moisture content&quot; niini, sa ting-ulan ug 18-21% kung ting-init.\n\n•Gisugyot nga mogamit og &quot;grain moisture meter&quot;\n\n•Gi-oka ang humay sulod sa panahon nga dili molapas sa usa ka adlaw gikan sa pag-ani sa panahon sa ting-ulan, ug dili molapas sa duha ka adlaw, sa panahon sa tig-init.\n\n•Seguradoha nga hinlo o limpyo ang makinang panggi-ok (thresher) ug husto usab ang &quot;setting&quot; niini</string>
     <string name="title_card7.8">Pagpa-uga sa humay</string>
     <string name="content_card7.9">Paugahon ang basa nga humay sulod sa 24 oras pagkahuman gi-ani aron malikayan ang pagpangitom niini. Ania ang pipili ka mga pamaagi sa pagpa-uga sa humay: \n\n•Ibulad sa adlaw, o di kaha,\n\n•Muagamit ug mekanikal nga pasilidad sama sa Flat Bed Dryer (FBD) hilabina kung panahon sa ting-ulan. Ang FBD adunay kapasidad nga makapauga ug 120 ka sako sa humay sulod sa 10 hangtod 12 ka oras. KUng mugamit ug FBD, siguradahon nga sundon ang saktong oras sa pagpauga aron dili kini muresulta sa ubos nga kalidad sa mga lugas sa humay.\n\n</string>
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

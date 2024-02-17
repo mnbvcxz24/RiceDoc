@@ -9,7 +9,6 @@
     tools:context="com.capstone.ricedoc.HomeFragment"
     android:layout_marginBottom="80dp">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -31,6 +30,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/white"
                 android:text="@string/home_text"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -51,7 +51,6 @@
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
         </LinearLayout>
-
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView

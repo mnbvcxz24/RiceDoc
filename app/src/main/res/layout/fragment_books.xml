@@ -8,7 +8,52 @@
     tools:context="com.capstone.ricedoc.BooksFragment"
     android:layout_marginBottom="80dp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOfStatusBar"
+        android:minHeight="50dp"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:text="@string/books_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/lang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/lang"/>
+
+            <ImageButton
+                android:id="@+id/btnLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="15dp"
+                android:src="@drawable/baseline_language_24"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -69,15 +114,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/binhi"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint1"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint1"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -133,15 +178,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/uma"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint2"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint2"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -196,15 +241,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/pagtanum"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint3"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint3"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -260,15 +305,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/sustansya"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint4"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint4"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -323,15 +368,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/patubig"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint5"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint5"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -387,15 +432,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/dangan"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint6"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint6"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -451,15 +496,15 @@
                         android:layout_width="150dp"
                         android:layout_height="20dp"
                         android:layout_below="@+id/ani"
-                        android:gravity="end"
-                        android:layout_toRightOf="@+id/centerpoint7"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="17dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="8dp"
-                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'" />
+                        android:layout_toRightOf="@+id/centerpoint7"
+                        android:gravity="end"
+                        android:text="Source: Sistemang PalayCheck 'Giya sa Pagtanum og Humay'"
+                        android:textSize="8dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

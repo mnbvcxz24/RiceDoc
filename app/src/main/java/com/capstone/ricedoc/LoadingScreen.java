@@ -19,7 +19,7 @@ public class LoadingScreen extends AppCompatActivity {
         Intent loadingIntent = getIntent();
         if (loadingIntent != null) {
             byte[] byteArray = loadingIntent.getByteArrayExtra("imageByteArray");
-            String result = loadingIntent.getStringExtra("text");
+            String result = loadingIntent.getStringExtra("disease");
             String conPercentage = loadingIntent.getStringExtra("confident_key");
             String cleanedConPercentage = conPercentage.replace("%", "");
 

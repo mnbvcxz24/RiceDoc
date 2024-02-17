@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     PredictionFragment predictionFragment = new PredictionFragment();
     BooksFragment booksFragment = new BooksFragment();
+    HistoryFragment historyFragment = new HistoryFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (itemId == R.id.books) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, booksFragment).commit();
+                    return true;
+                } else if (itemId == R.id.history) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, historyFragment).commit();
                     return true;
                 }
                 return false;
