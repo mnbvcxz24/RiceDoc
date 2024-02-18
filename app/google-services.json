@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272825601591",
+    "project_id": "ricedoc-31a3c",
+    "storage_bucket": "ricedoc-31a3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272825601591:android:6215bb000c99827c1979b2",
+        "android_client_info": {
+          "package_name": "com.capstone.ricedoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272825601591-3l7coihupctok60goj9r0gf5bghvffpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-tLHYoxjpA_309lXNKmbSbqPfsDX7TUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272825601591-3l7coihupctok60goj9r0gf5bghvffpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
