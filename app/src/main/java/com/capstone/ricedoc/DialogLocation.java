@@ -2,7 +2,9 @@ package com.capstone.ricedoc;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ import java.util.Set;
 
 public class DialogLocation extends DialogFragment {
     private Set<String> barangaySet = new HashSet<>();
+    AlertDialog dialog1, dialog2;
 
     @NonNull
     @Override
@@ -38,7 +41,7 @@ public class DialogLocation extends DialogFragment {
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("rice_production_data");
 
-        AlertDialog dialog1 = builder1.create();
+        dialog1 = builder1.create();
 
         collectionReference.get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -48,8 +51,11 @@ public class DialogLocation extends DialogFragment {
                             String barangay = document.getString("Barangay");
                             barangaySet.add(barangay);
                         }
-                        showSecondDialog();
-                        dialog1.dismiss();
+                        if (!barangaySet.isEmpty()) {
+                            showSecondDialog();
+                        } else {
+                            Toast.makeText(requireContext(), "No Barangay Available", Toast.LENGTH_LONG).show();
+                        }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -59,26 +65,39 @@ public class DialogLocation extends DialogFragment {
                     }
                 });
 
-        // Return null to avoid creating an empty AlertDialog here
         return dialog1;
     }
 
     private void showSecondDialog() {
-        AlertDialog.Builder builder2 = new AlertDialog.Builder(getActivity());
-        String[] barangays = barangaySet.toArray(new String[0]);
+        if (isAdded()) {
+            AlertDialog.Builder builder2 = new AlertDialog.Builder(getActivity());
+            String[] barangays = barangaySet.toArray(new String[0]);
 
-        builder2.setTitle("Choose Barangay");
-        builder2.setItems(barangays, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog2, int i) {
-                System.out.println("Barangay : " + barangays[i]);
-                //Toast.makeText(getActivity(), "Barangay : " + barangays[i], Toast.LENGTH_SHORT).show();
-            }
-        });
+            builder2.setTitle("Choose Barangay");
+            builder2.setItems(barangays, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    if (isAdded()) {
+                        SharedPreferences preferences = getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
-        AlertDialog dialog2 = builder2.create();
-        dialog2.show();
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("selected_location", barangays[i]);
+                        editor.apply();
+                        Toast.makeText(getActivity(), "Selected Location: " + barangays[i], Toast.LENGTH_LONG).show();
+                        dialog1.dismiss();
+                    }
+                }
+            });
+
+            builder2.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    dialog1.dismiss();
+                }
+            });
+            dialog2 = builder2.create();
+            dialog2.show();
+        }
     }
 }
-
 

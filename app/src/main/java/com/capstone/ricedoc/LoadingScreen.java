@@ -29,7 +29,7 @@ public class LoadingScreen extends AppCompatActivity {
                 float confidenceValue = Float.parseFloat(cleanedConPercentage);
 
                 if (confidenceValue < 80.0) {
-                    Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try again.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try again.", Toast.LENGTH_LONG).show();
                     onBackPressed();
                     return;
                 }
@@ -49,11 +49,11 @@ public class LoadingScreen extends AppCompatActivity {
                 } else if ("Tungro Virus".equals(result)) {
                     finalIntent = new Intent(LoadingScreen.this, Tungro.class);
                 } else if ("Unknown".equals(result)) {
-                    Toast.makeText(LoadingScreen.this, "Please make sure that only the rice leaf is captured. Please try again.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoadingScreen.this, "Please make sure that only the rice leaf is captured. Please try again.", Toast.LENGTH_LONG).show();
                     onBackPressed();
                     return;
                 } else {
-                    Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try again.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try again.", Toast.LENGTH_LONG).show();
                     onBackPressed();
                     return;
                 }

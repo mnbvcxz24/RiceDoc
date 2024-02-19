@@ -52,15 +52,10 @@ public class HomeFragment extends Fragment {
     int IMAGE_SIZE = 224;
     Button camera, gallery;
     ImageButton btnLanguage;
-    private static final String PREF_SELECTED_LANGUAGE = "selected_language";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-        //TOOLBAR
-        androidx.appcompat.widget.Toolbar toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         btnLanguage = view.findViewById(R.id.btnLanguage);
 
@@ -142,18 +137,16 @@ public class HomeFragment extends Fragment {
         }
     }
     private void saveSelectedLanguage(String languageCode) {
-        SharedPreferences preferences = requireContext().getSharedPreferences(
-                requireContext().getPackageName(), Context.MODE_PRIVATE);
+        SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(PREF_SELECTED_LANGUAGE, languageCode);
+        editor.putString("selected_language", languageCode);
         editor.apply();
     }
     private String loadSelectedLanguage() {
-        SharedPreferences preferences = requireContext().getSharedPreferences(
-                requireContext().getPackageName(), Context.MODE_PRIVATE);
+        SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
-        return preferences.getString(PREF_SELECTED_LANGUAGE, "en");
+        return preferences.getString("selected_language", "en");
     }
     private void restartActivity() {
         Intent intent = requireActivity().getIntent();
@@ -202,7 +195,7 @@ public class HomeFragment extends Fragment {
                     e.printStackTrace();
                 }
             } else {
-                Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_LONG).show();
             }
         } else if (requestCode == REQUEST_CODE_CAMERA) {
             if (resultCode == Activity.RESULT_OK && data != null && data.getExtras() != null) {
@@ -213,7 +206,7 @@ public class HomeFragment extends Fragment {
 
                 classifyImage(resizedBitmap, thumbnailBitmap);
             } else {
-                Toast.makeText(requireContext(), "Image capture canceled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Image capture canceled", Toast.LENGTH_LONG).show();
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
