@@ -46,14 +46,19 @@ public class HistoryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         currentLocation  = view.findViewById(R.id.currentLocation);
-
         loadSelectedLocation();
 
         linearLayout = view.findViewById(R.id.linearLayout);
+
+
+        // load deviceId
+        SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        String deviceId = preferences.getString("deviceId", "");
+
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("recent_scans");
 
-        collectionReference.get()
+        collectionReference.whereEqualTo("UniqueDeviceID", deviceId).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -61,10 +66,12 @@ public class HistoryFragment extends Fragment {
 
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             String barangay = document.getString("Barangay");
+                            String confidence = document.getString("Confidence");
+                            String result = document.getString("Result");
                             barangaySet.add(barangay);
 
-                            // Create card view or handle UI based on the barangay
-                            createCardView(linearLayout, barangay);
+                            // Create card view
+                            createCardView(linearLayout, barangay, confidence, result);
                         }
 
                     }
@@ -73,7 +80,6 @@ public class HistoryFragment extends Fragment {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.e("Firestore", "Error fetching recent scans", e);
-                        // Handle the failure, e.g., show an error message
                     }
                 });
 
@@ -94,10 +100,9 @@ public class HistoryFragment extends Fragment {
 
             String selectedLocation = preferences.getString("selected_location", "Please Choose Location");
             currentLocation.setText(selectedLocation);
-            System.out.println(selectedLocation);
         }
     }
-    private void createCardView(LinearLayout linearLayout, String barangay) {
+    private void createCardView(LinearLayout linearLayout, String barangay, String confidence, String result) {
         if (isAdded()){
             CardView cardView = new CardView(requireContext());
             CardView.LayoutParams layoutParams = new CardView.LayoutParams(
@@ -107,13 +112,33 @@ public class HistoryFragment extends Fragment {
             layoutParams.setMargins(15, 16, 15, 16);
             cardView.setLayoutParams(layoutParams);
 
-            TextView textView = new TextView(requireContext());
-            textView.setText(barangay);
-            textView.setTextSize(18);
-            textView.setPadding(15, 16, 15, 16);
+            LinearLayout linearLayoutInsideCard = new LinearLayout(requireContext());
+            linearLayoutInsideCard.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
+            linearLayoutInsideCard.setOrientation(LinearLayout.VERTICAL);
 
-            cardView.addView(textView);
+            TextView textView1 = new TextView(requireContext());
+            textView1.setText("Barangay: " + barangay);
+            textView1.setTextSize(18);
+            textView1.setPadding(15, 16, 15, 16);
 
+            TextView textView2 = new TextView(requireContext());
+            textView2.setText("Confidence: " + confidence);
+            textView2.setTextSize(18);
+            textView2.setPadding(15, 16, 15, 16);
+
+            TextView textView3 = new TextView(requireContext());
+            textView3.setText("Result: " + result);
+            textView3.setTextSize(18);
+            textView3.setPadding(15, 16, 15, 16);
+
+            linearLayoutInsideCard.addView(textView1);
+            linearLayoutInsideCard.addView(textView2);
+            linearLayoutInsideCard.addView(textView3);
+
+            cardView.addView(linearLayoutInsideCard);
             linearLayout.addView(cardView);
         }
     }

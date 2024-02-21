@@ -3,13 +3,19 @@ package com.capstone.ricedoc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.MenuItem;
 
-import com.capstone.ricedoc.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
+
+import java.util.UUID;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +36,26 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.home);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+
+        //Enable FireStore Offline support
+        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true)
+                .build();
+        firebaseFirestore.setFirestoreSettings(settings);
+
+        // Generate devicId
+        SharedPreferences preferences = getSharedPreferences("pref", Context.MODE_PRIVATE);
+        String deviceId = preferences.getString("deviceId", "");
+
+        // check if deviceId in sharedpreference is empty
+        if(TextUtils.isEmpty(deviceId)){
+            String uniqueID = UUID.randomUUID().toString();
+            String androidId = android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+            String uniqueDeviceId = uniqueID + androidId;
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("deviceId", uniqueDeviceId);
+            editor.apply();
+        }
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
