@@ -54,6 +54,7 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
+        // LOAD THE CURRENT LOCATION SELECTED
         currentLocation  = view.findViewById(R.id.currentLocation);
         loadSelectedLocation();
 
@@ -69,10 +70,12 @@ public class HistoryFragment extends Fragment {
         SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
         String deviceId = preferences.getString("deviceId", "");
 
+        // LOAD RECENT SCANS DATA FROM FIREBASE
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("recent_scans");
 
         collectionReference.whereEqualTo("UniqueDeviceID", deviceId)
+                .whereEqualTo("Barangay", loadSelectedLocation())
                 .orderBy("Date", Query.Direction.DESCENDING).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
@@ -127,13 +130,17 @@ public class HistoryFragment extends Fragment {
         return view;
     }
 
-    private void loadSelectedLocation(){
+    private String loadSelectedLocation(){
         if (isAdded()) {
             SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
             String selectedLocation = preferences.getString("selected_location", "Please Choose Location");
             currentLocation.setText(selectedLocation);
+            String current_location = selectedLocation;
+
+            return current_location;
         }
+        return null;
     }
     private void createCardView(LinearLayout linearLayout, String barangay, String confidence, String result, String dateScan, String imageFileName) {
         if (isAdded()){
