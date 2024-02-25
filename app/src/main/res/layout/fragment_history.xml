@@ -35,6 +35,13 @@
                 android:layout_weight="1"/>
 
             <ImageButton
+                android:id="@+id/btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_info_24"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageButton
                 android:id="@+id/btnLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -76,6 +83,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
         </LinearLayout>
     </ScrollView>
 

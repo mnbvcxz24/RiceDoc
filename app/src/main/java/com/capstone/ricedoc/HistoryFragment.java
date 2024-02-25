@@ -1,5 +1,6 @@
 package com.capstone.ricedoc;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -15,12 +16,14 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -42,7 +45,7 @@ import java.util.Set;
 
 public class HistoryFragment extends Fragment {
 
-    ImageButton btnLocation;
+    ImageButton btnLocation, btnInfo;
     LinearLayout linearLayout;
     TextView currentLocation;
 
@@ -56,8 +59,13 @@ public class HistoryFragment extends Fragment {
 
         linearLayout = view.findViewById(R.id.linearLayout);
 
+        // DISPLAY LOADING IF RECENT SCANS IS LOADING
+        ProgressDialog loadingDialog = new ProgressDialog(requireContext());
+        loadingDialog.setMessage("Loading...");
+        loadingDialog.setCancelable(false);
+        loadingDialog.show();
 
-        // load deviceId
+        // LOAD DEVICE ID
         SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
         String deviceId = preferences.getString("deviceId", "");
 
@@ -69,6 +77,9 @@ public class HistoryFragment extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        // DISMISS LOADING DIALOG WHEN SUCCESS
+                        loadingDialog.dismiss();
+
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             String barangay = document.getString("Barangay");
                             String confidence = document.getString("Confidence");
@@ -97,6 +108,14 @@ public class HistoryFragment extends Fragment {
                     }
                 });
 
+        btnInfo = view.findViewById(R.id.btnInfo);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DialogDeviceId().show(getChildFragmentManager(), "dialogDeviceId");
+            }
+        });
+
         btnLocation = view.findViewById(R.id.btnLocation);
         btnLocation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,61 +138,65 @@ public class HistoryFragment extends Fragment {
     private void createCardView(LinearLayout linearLayout, String barangay, String confidence, String result, String dateScan, String imageFileName) {
         if (isAdded()){
             CardView cardView = new CardView(requireContext());
-            CardView.LayoutParams layoutParams = new CardView.LayoutParams(
+            CardView.LayoutParams cardLayoutParams = new CardView.LayoutParams(
                     CardView.LayoutParams.MATCH_PARENT,
                     CardView.LayoutParams.WRAP_CONTENT
             );
-            layoutParams.setMargins(10, 5, 10, 10);
-            cardView.setLayoutParams(layoutParams);
+            cardLayoutParams.setMargins(10, 5, 10, 20);
+            cardView.setLayoutParams(cardLayoutParams);
 
             LinearLayout linearLayoutInsideCard = new LinearLayout(requireContext());
             LinearLayout.LayoutParams layoutParamsInsideCard = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
-
-            layoutParamsInsideCard.setMargins(20, 15, 20, 15);
-            linearLayoutInsideCard.setLayoutParams(layoutParamsInsideCard);
+            layoutParamsInsideCard.setMargins(20, 0, 20, 20);
             linearLayoutInsideCard.setOrientation(LinearLayout.VERTICAL);
+            linearLayoutInsideCard.setGravity(Gravity.CENTER);
 
+            // IMAGE VIEW
             String imagePath = "/storage/emulated/0/Pictures/RiceDoc/"+imageFileName;
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
 
             ImageView imageIv = new ImageView(requireContext());
             imageIv.setImageBitmap(bitmap);
             imageIv.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
+                    500,
+                    500
             ));
+            imageIv.setPadding(30, 30, 20, 30);
 
+            // LOCATION TEXT VIEW
             TextView locationTv = new TextView(requireContext());
             String locationCaption = "Barangay: ";
             CharSequence formattedTextLocation = boldText(locationCaption, barangay);
             locationTv.setText(formattedTextLocation, TextView.BufferType.SPANNABLE);
             locationTv.setTextSize(18);
-            locationTv.setPadding(10, 15, 10, 15);
+            locationTv.setPadding(30, 10, 20, 30);
 
+            // CONFIDENCE TEXT VIEW
             TextView confidenceTv = new TextView(requireContext());
             String confidenceCaption = "Confidence: ";
             CharSequence formattedTextConfidence = boldText(confidenceCaption, confidence);
             confidenceTv.setText(formattedTextConfidence, TextView.BufferType.SPANNABLE);
             confidenceTv.setTextSize(18);
-            confidenceTv.setPadding(10, 15, 10, 15);
+            confidenceTv.setPadding(30, 10, 20, 30);
 
+            // RESULT TEXT VIEW
             TextView resultTv = new TextView(requireContext());
             String resultCaption = "Result: ";
             CharSequence formattedTextResult = boldText(resultCaption, result);
             resultTv.setText(formattedTextResult, TextView.BufferType.SPANNABLE);
             resultTv.setTextSize(18);
-            resultTv.setPadding(10, 15, 10, 15);
+            resultTv.setPadding(30, 10, 20, 30);
 
+            // DATE TEXT VIEW
             TextView dateTv = new TextView(requireContext());
-            String dateCaption = "Date: ";
+            String dateCaption = "Date Capture: ";
             CharSequence formattedTextDate = boldText(dateCaption, dateScan);
             dateTv.setText(formattedTextDate, TextView.BufferType.SPANNABLE);
             dateTv.setTextSize(18);
-            dateTv.setPadding(10, 15, 10, 15);
-
+            dateTv.setPadding(30, 10, 20, 30);
 
             linearLayoutInsideCard.addView(imageIv);
             linearLayoutInsideCard.addView(locationTv);
