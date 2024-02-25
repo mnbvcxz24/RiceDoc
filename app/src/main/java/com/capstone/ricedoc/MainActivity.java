@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         // check if deviceId in sharedpreference is empty
         if(TextUtils.isEmpty(deviceId)){
             String uniqueID = UUID.randomUUID().toString();
-            String androidId = android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-            String uniqueDeviceId = uniqueID + androidId;
+            String androidId = generateAndroidID();
+            String uniqueDeviceId = uniqueID + "_" + androidId;
             SharedPreferences.Editor editor = preferences.edit();
             editor.putString("deviceId", uniqueDeviceId);
             editor.apply();
@@ -78,5 +78,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private String  generateAndroidID() {
+        String androidId = android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+        // generate another UUID if the androidId return null
+        if (androidId == null || androidId.isEmpty()){
+            return UUID.randomUUID().toString();
+        }
+        return androidId;
     }
 }

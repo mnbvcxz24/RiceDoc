@@ -1,35 +1,41 @@
 package com.capstone.ricedoc;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.Timestamp;
 import com.google.firebase.database.*;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
@@ -58,20 +64,28 @@ public class HistoryFragment extends Fragment {
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("recent_scans");
 
-        collectionReference.whereEqualTo("UniqueDeviceID", deviceId).get()
+        collectionReference.whereEqualTo("UniqueDeviceID", deviceId)
+                .orderBy("Date", Query.Direction.DESCENDING).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        Set<String> barangaySet = new HashSet<>();
-
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             String barangay = document.getString("Barangay");
                             String confidence = document.getString("Confidence");
                             String result = document.getString("Result");
-                            barangaySet.add(barangay);
+                            Timestamp timestamp = document.getTimestamp("Date");
+                            String imageFileName = document.getString("ImageFileName");
+                            String dateScan;
 
+                            if (timestamp != null){
+                                Date date = timestamp.toDate();
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+                                dateScan = sdf.format(date);
+                            } else {
+                                dateScan = "Date and Time is not available";
+                            }
                             // Create card view
-                            createCardView(linearLayout, barangay, confidence, result);
+                            createCardView(linearLayout, barangay, confidence, result, dateScan, imageFileName);
                         }
 
                     }
@@ -102,44 +116,81 @@ public class HistoryFragment extends Fragment {
             currentLocation.setText(selectedLocation);
         }
     }
-    private void createCardView(LinearLayout linearLayout, String barangay, String confidence, String result) {
+    private void createCardView(LinearLayout linearLayout, String barangay, String confidence, String result, String dateScan, String imageFileName) {
         if (isAdded()){
             CardView cardView = new CardView(requireContext());
             CardView.LayoutParams layoutParams = new CardView.LayoutParams(
                     CardView.LayoutParams.MATCH_PARENT,
                     CardView.LayoutParams.WRAP_CONTENT
             );
-            layoutParams.setMargins(15, 16, 15, 16);
+            layoutParams.setMargins(10, 5, 10, 10);
             cardView.setLayoutParams(layoutParams);
 
             LinearLayout linearLayoutInsideCard = new LinearLayout(requireContext());
-            linearLayoutInsideCard.setLayoutParams(new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams layoutParamsInsideCard = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
-            ));
+            );
+
+            layoutParamsInsideCard.setMargins(20, 15, 20, 15);
+            linearLayoutInsideCard.setLayoutParams(layoutParamsInsideCard);
             linearLayoutInsideCard.setOrientation(LinearLayout.VERTICAL);
 
-            TextView textView1 = new TextView(requireContext());
-            textView1.setText("Barangay: " + barangay);
-            textView1.setTextSize(18);
-            textView1.setPadding(15, 16, 15, 16);
+            String imagePath = "/storage/emulated/0/Pictures/RiceDoc/"+imageFileName;
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
 
-            TextView textView2 = new TextView(requireContext());
-            textView2.setText("Confidence: " + confidence);
-            textView2.setTextSize(18);
-            textView2.setPadding(15, 16, 15, 16);
+            ImageView imageIv = new ImageView(requireContext());
+            imageIv.setImageBitmap(bitmap);
+            imageIv.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
 
-            TextView textView3 = new TextView(requireContext());
-            textView3.setText("Result: " + result);
-            textView3.setTextSize(18);
-            textView3.setPadding(15, 16, 15, 16);
+            TextView locationTv = new TextView(requireContext());
+            String locationCaption = "Barangay: ";
+            CharSequence formattedTextLocation = boldText(locationCaption, barangay);
+            locationTv.setText(formattedTextLocation, TextView.BufferType.SPANNABLE);
+            locationTv.setTextSize(18);
+            locationTv.setPadding(10, 15, 10, 15);
 
-            linearLayoutInsideCard.addView(textView1);
-            linearLayoutInsideCard.addView(textView2);
-            linearLayoutInsideCard.addView(textView3);
+            TextView confidenceTv = new TextView(requireContext());
+            String confidenceCaption = "Confidence: ";
+            CharSequence formattedTextConfidence = boldText(confidenceCaption, confidence);
+            confidenceTv.setText(formattedTextConfidence, TextView.BufferType.SPANNABLE);
+            confidenceTv.setTextSize(18);
+            confidenceTv.setPadding(10, 15, 10, 15);
+
+            TextView resultTv = new TextView(requireContext());
+            String resultCaption = "Result: ";
+            CharSequence formattedTextResult = boldText(resultCaption, result);
+            resultTv.setText(formattedTextResult, TextView.BufferType.SPANNABLE);
+            resultTv.setTextSize(18);
+            resultTv.setPadding(10, 15, 10, 15);
+
+            TextView dateTv = new TextView(requireContext());
+            String dateCaption = "Date: ";
+            CharSequence formattedTextDate = boldText(dateCaption, dateScan);
+            dateTv.setText(formattedTextDate, TextView.BufferType.SPANNABLE);
+            dateTv.setTextSize(18);
+            dateTv.setPadding(10, 15, 10, 15);
+
+
+            linearLayoutInsideCard.addView(imageIv);
+            linearLayoutInsideCard.addView(locationTv);
+            linearLayoutInsideCard.addView(confidenceTv);
+            linearLayoutInsideCard.addView(resultTv);
+            linearLayoutInsideCard.addView(dateTv);
 
             cardView.addView(linearLayoutInsideCard);
             linearLayout.addView(cardView);
         }
+    }
+
+    private Spannable boldText(String caption, String dateScan) {
+        String fulltext = caption + dateScan;
+        SpannableString spannableString = new SpannableString(fulltext);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD), caption.length(), fulltext.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        return spannableString;
     }
 }

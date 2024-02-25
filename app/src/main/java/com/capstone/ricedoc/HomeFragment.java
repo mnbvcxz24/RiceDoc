@@ -29,6 +29,7 @@ import android.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -49,6 +50,7 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE_PERMISSION = 11;
     private static final int REQUEST_CODE_CAMERA = 12;
     private static final int REQUEST_CODE_GALLERY = 13;
+    private static final int REQUEST_CODE_STORAGE = 14;
     int IMAGE_SIZE = 224;
     Button camera, gallery;
     ImageButton btnLanguage;
@@ -152,6 +154,16 @@ public class HomeFragment extends Fragment {
         Intent intent = requireActivity().getIntent();
         requireActivity().finish();
         requireActivity().startActivity(intent);
+    }
+    private boolean getStoragePermission(){
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Request the permission
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_STORAGE);
+            return false;  // Permission not granted yet
+        } else {
+            return true;   // Permission already granted
+        }
     }
     private boolean getPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -269,11 +281,11 @@ public class HomeFragment extends Fragment {
     private void navigateToResultPage(Bitmap thumbnailBitmap, String result, String conPercentage) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         thumbnailBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte[] byteArray = stream.toByteArray();
+        byte[] imageByteArray = stream.toByteArray();
 
         Intent loadingIntent = new Intent(requireContext(), LoadingScreen.class);
 
-        loadingIntent.putExtra("imageByteArray", byteArray);
+        loadingIntent.putExtra("imageByteArray", imageByteArray);
         loadingIntent.putExtra("disease", result);
         loadingIntent.putExtra("confident_key", conPercentage);
         startActivity(loadingIntent);
