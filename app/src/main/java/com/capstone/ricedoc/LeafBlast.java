@@ -1,12 +1,32 @@
 package com.capstone.ricedoc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class LeafBlast extends AppCompatActivity {
 
@@ -30,6 +50,61 @@ public class LeafBlast extends AppCompatActivity {
         String conPercentage = getIntent().getStringExtra("confident_key");
         confidencelevel = findViewById(R.id.confidencelevel);
         confidencelevel.setText(conPercentage);
+
+        // LOAD DISEASE DATA FROM FIREBASE
+        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+        CollectionReference collectionReference = firebaseFirestore.collection("diseases_data");
+
+        collectionReference.whereEqualTo("Language", currentLang())
+                .whereEqualTo("DiseaseName", "Leaf Blast")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            TextView head1 = findViewById(R.id.head1);
+                            TextView content1 = findViewById(R.id.content1);
+                            TextView head2 = findViewById(R.id.head2);
+                            TextView content2 = findViewById(R.id.content2);
+
+                            String disease = document.getString("Disease");
+                            String diseaseInfo = document.getString("DiseaseInfo");
+                            String treatment = document.getString("Treatment");
+                            String disclaimer = document.getString("Disclaimer");
+
+                            List<Object> treatmentInfoList = (List<Object>) document.get("TreatmentInfo");
+
+                            if (treatmentInfoList != null) {
+                                String[] treatmentInfo = treatmentInfoList.toArray(new String[treatmentInfoList.size()]);
+                                StringBuilder htmlStringBuilder = new StringBuilder();
+
+                                for (int i = 0; i < treatmentInfo.length; i++) {
+                                    htmlStringBuilder.append("<b>").append("•").append(". </b>").append(treatmentInfo[i]).append("<br/><br/>");
+                                }
+                                content2.setText(Html.fromHtml(htmlStringBuilder.toString()));
+                            } else {
+                                Log.e("Error", "TreatmentInfo is null");
+                            }
+
+                            head1.setText(disease);
+                            content1.setText(diseaseInfo);
+                            head2.setText(treatment);
+                        }
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("Firestore", "Error fetching recent scans", e);
+                    }
+                });
+    }
+    private String currentLang(){
+        SharedPreferences preferences = this.getSharedPreferences("pref", Context.MODE_PRIVATE);
+        String currentLanguage = preferences.getString("selected_language", "en");
+
+        return currentLanguage;
     }
     @Override
     public void onBackPressed(){

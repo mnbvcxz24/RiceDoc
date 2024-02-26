@@ -25,7 +25,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class DialogLocation extends DialogFragment {
@@ -51,10 +55,17 @@ public class DialogLocation extends DialogFragment {
                             String barangay = document.getString("Barangay");
                             barangaySet.add(barangay);
                         }
+
+
                         if (!barangaySet.isEmpty()) {
                             showSecondDialog();
                         } else {
-                            Toast.makeText(requireContext(), "No Barangay Available", Toast.LENGTH_LONG).show();
+                            List<String> staticBarangays = Arrays.asList("Consolacion", "Dalisay", "Datu Abdul",
+                                    "Kuswagan", "Little Panay", "Malativas", "Malitbog", "Manay", "Nanyo",
+                                    "Pilar, Southern Davao", "Quezon", "San Roque", "Southern Davao");
+                            barangaySet.addAll(staticBarangays);
+                            showSecondDialog();
+                            Toast.makeText(requireContext(), "No Internet Connection, Using Offline List Barangay", Toast.LENGTH_LONG).show();
                         }
                     }
                 })
@@ -72,6 +83,8 @@ public class DialogLocation extends DialogFragment {
         if (isAdded()) {
             AlertDialog.Builder builder2 = new AlertDialog.Builder(getActivity());
             String[] barangays = barangaySet.toArray(new String[0]);
+            List<String> sortedBarangays = new ArrayList<>(Arrays.asList(barangays));
+            Collections.sort(sortedBarangays);
 
             builder2.setTitle("Choose Barangay");
             builder2.setItems(barangays, new DialogInterface.OnClickListener() {

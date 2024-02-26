@@ -28,16 +28,16 @@
     <string name="camera">Camera</string>
     <string name="image">Image</string>
 
-    <string name="AboutDisease">About the diseases</string>
+    <string name="AboutDisease">About the disease</string>
     <string name="treatment">Treatment</string>
     <string name="ProjectEstimated">Projected damage estimation</string>
     //leafblast
     <string name="leafblastContent1">Rice leaf blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice crops.</string>
-    <string name="leafblastContent2">• Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
-            \n\n• Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
-            \n\n• Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
-\n\n• Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
-\n\n• Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle.</string>
+    <string name="leafblastContent2">\u2022 Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
+            \n\n\u2022 Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
+            \n\n\u2022 Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
+\n\n\u2022 Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
+\n\n\u2022 Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle.</string>
     <string name="LeafblastContent3">Blast infection can lead to great loss, there is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.3 (if the damage is at 30%) or 0.5 (if the damage is at 50%)
 \n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 

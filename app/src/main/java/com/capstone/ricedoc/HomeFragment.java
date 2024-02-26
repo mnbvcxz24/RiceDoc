@@ -9,6 +9,8 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -61,6 +63,13 @@ public class HomeFragment extends Fragment {
 
         btnLanguage = view.findViewById(R.id.btnLanguage);
 
+        // CHECK NETWORK CONNECTIVITY
+        if (isNetworkAvailable()) {
+
+        } else {
+            Toast.makeText(requireContext(), "You are currently OFFLINE", Toast.LENGTH_SHORT).show();
+        }
+
         //CLICK LISTENER FOR THE LANGUAGE BUTTON
         btnLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +106,11 @@ public class HomeFragment extends Fragment {
         setLocale(loadSelectedLanguage());
         return view;
     }
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     private void showLanguageMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(requireContext(), view);
         popupMenu.inflate(R.menu.language_menu);

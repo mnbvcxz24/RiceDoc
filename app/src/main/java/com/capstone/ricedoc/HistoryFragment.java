@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -53,6 +56,13 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
+
+        // CHECK NETWORK CONNECTIVITY
+        if (isNetworkAvailable()) {
+
+        } else {
+            Toast.makeText(requireContext(), "You are currently OFFLINE", Toast.LENGTH_SHORT).show();
+        }
 
         // LOAD THE CURRENT LOCATION SELECTED
         currentLocation  = view.findViewById(R.id.currentLocation);
@@ -107,6 +117,9 @@ public class HistoryFragment extends Fragment {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                        // DISMISS THE LOADING DIALOG IF ERROR
+                        loadingDialog.dismiss();
+                        Toast.makeText(requireContext(), "No Data Available", Toast.LENGTH_LONG).show();
                         Log.e("Firestore", "Error fetching recent scans", e);
                     }
                 });
@@ -129,16 +142,19 @@ public class HistoryFragment extends Fragment {
 
         return view;
     }
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     private String loadSelectedLocation(){
         if (isAdded()) {
             SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
             String selectedLocation = preferences.getString("selected_location", "Please Choose Location");
             currentLocation.setText(selectedLocation);
-            String current_location = selectedLocation;
 
-            return current_location;
+            return selectedLocation;
         }
         return null;
     }
