@@ -1,6 +1,7 @@
 package com.capstone.ricedoc;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Context;
@@ -35,7 +36,6 @@ public class PredictionFragment extends Fragment {
         // Check network connectivity
         if (isNetworkAvailable()) {
             webView.setWebViewClient(new MyWebViewClient());
-
             webView.loadUrl("https://ricedoc.pythonanywhere.com");
         } else {
             showNoInternetDialog();
