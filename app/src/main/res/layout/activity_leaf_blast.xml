@@ -73,7 +73,7 @@
             android:layout_below="@+id/confidence"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text=""
+            android:text="@string/AboutDisease"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
@@ -98,7 +98,7 @@
             android:layout_below="@+id/content1"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
-            android:text=""
+            android:text="@string/treatment"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
@@ -135,7 +135,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="@string/LeafblastContent3"
+            android:text=""
             />
 
 

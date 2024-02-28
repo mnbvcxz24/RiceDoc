@@ -36,7 +36,7 @@ public class PredictionFragment extends Fragment {
         if (isNetworkAvailable()) {
             webView.setWebViewClient(new MyWebViewClient());
 
-            webView.loadUrl("https://moldy24.pythonanywhere.com");
+            webView.loadUrl("https://ricedoc.pythonanywhere.com");
         } else {
             showNoInternetDialog();
         }

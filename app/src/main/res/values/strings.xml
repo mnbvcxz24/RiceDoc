@@ -4,23 +4,6 @@
     <string name="home_text">Home</string>
     <string name="books_text">Books</string>
     <string name="history_text">History</string>
-    <string-array name="barangay">
-        <item>Manay</item>
-        <item>Southern Davao</item>
-        <item>Nanyo</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
     <string name="lang">EN</string>
     <string name="phase1">Take a picture</string>
     <string name="phase2">Get a result</string>
@@ -31,74 +14,6 @@
     <string name="AboutDisease">About the disease</string>
     <string name="treatment">Treatment</string>
     <string name="ProjectEstimated">Projected damage estimation</string>
-    //leafblast
-    <string name="leafblastContent1">Rice leaf blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice crops.</string>
-    <string name="leafblastContent2">\u2022 Crop Rotation: Avoid planting rice in the same field consecutively. Rotate rice with other crops to break the disease cycle.
-            \n\n\u2022 Beneficial Microorganisms: Some beneficial microorganisms, like certain strains of bacteria and fungi, can suppress the growth of the blast fungus. These can be applied to the soil or foliage as biological control agents.
-            \n\n\u2022 Fungicides: Fungicides can be used to manage leaf blast. However, their use should be judicious to prevent the development of fungicide-resistant strains. Consult with local agricultural extension services for recommended fungicides and application methods.
-\n\n\u2022 Scouting: Regularly monitor your fields for signs of leaf blast. Early detection allows for timely intervention and can prevent the disease from spreading.
-\n\n\u2022 Residue Management: Properly dispose of crop residues after harvest. Infected plant material left in the field can harbor the fungus and contribute to the disease cycle.</string>
-    <string name="LeafblastContent3">Blast infection can lead to great loss, there is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.3 (if the damage is at 30%) or 0.5 (if the damage is at 50%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-
-    //sheathblight
-    <string name="sheathblightContent1">Rice sheath blight, caused by the fungus Rhizoctonia solani, is a significant disease that affects rice production worldwide.</string>
-    <string name="sheathblightContent2">• Crop Rotation: Avoid planting rice in the same field continuously. Rotate rice with non-host crops to reduce the buildup of the pathogen in the soil.
-            \n\n• Remove Infected Crop Residues: After harvest, remove and destroy infected crop residues to reduce the inoculum source for the next planting season.
-            \n\n• Fungicide Timing: If the disease pressure is high and cultural practices alone are insufficient, consider applying fungicides. Timing is crucial; apply fungicides during the early stages of the disease when symptoms first appear.
-\n\n• Biocontrol Agents: Some beneficial microorganisms, such as Trichoderma spp., have been found to be effective in suppressing rice sheath blight. These can be applied as biocontrol agents.
-\n\n• Improving Drainage:Ensure proper field drainage to prevent waterlogged conditions, which can favor the development of sheath blight.</string>
-    <string name="sheathblightContent3">One of the most significant effects of rice sheath blight is yield reduction. The disease affects the photosynthetic area of the rice plant, leading to poor grain filling and reduced kernel weight. There is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.5 (if the damage is at 50%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-
-    //brownspot
-    <string name="brownspotContent1">Rice brown spot, caused by the fungus Bipolaris oryzae, is a common disease affecting rice plants. Its impacts on production can be significant and varied, depending on the severity of the infection, the rice variety,
-        environmental conditions, and the stage of crop development.</string>
-    <string name="brownspotContent2">• Resistant Varieties: Planting rice varieties that are resistant or less susceptible to brown spot can be an effective strategy. Consult with local agricultural extension services or research institutions to identify suitable resistant varieties for your region.
-            \n\n• Crop Rotation: Implement crop rotation practices to break the disease cycle. Avoid planting rice in the same field consecutively, as the pathogen can survive in crop debris.
-            \n\n• Seed Treatment: Use disease-free, certified seeds and treat them with fungicides or hot water to reduce the risk of introducing the pathogen into the field through infected seeds.
-\n\n• Proper Irrigation: Avoid excessive or continuous flooding, as this can create favorable conditions for the disease. Use intermittent or alternate wetting and drying (AWD) irrigation practices to reduce disease incidence.
-\n\n• Fungicides: When the disease reaches damaging levels, chemical control may be necessary. Fungicides containing active ingredients like azoxystrobin, propiconazole, or tricyclazole are effective against rice brown spot. Follow the recommended application rates and timing provided on the product label.</string>
-    <string name="brownspotContent3">Brown spot affects the photosynthetic capacity of leaves, leading to reduced grain filling and ultimately reduced yield. There is a formula to calculate to get the estimated damage of the disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.5 (if the damage is at 50%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-
-    //leaffolder
-    <string name="leaffolderContent1">The rice leaffolder (Cnaphalocrocis medinalis) is a significant pest that affects rice production.
-        Its impact can be quite detrimental, leading to reduced crop yields and economic losses.</string>
-    <string name="leaffolderContent2">• Proper Field Hygiene: Remove and destroy crop residues after harvest to reduce overwintering sites for leaffolder larvae.
-            \n\n• Natural Predators: Encourage natural predators like spiders, ladybugs, and parasitoid wasps, which feed on leaffolder larvae and eggs.
-            \n\n• Insecticides: Chemical insecticides, such as pyrethroids and neonicotinoids, can be used to control leaffolders. However, their use should be judicious to prevent the development of pesticide resistance and minimize environmental impact.
-\n\n• Plant Resistant Rice Varieties: Plant rice varieties that are resistant or tolerant to leaffolder damage. Resistant varieties can significantly reduce the impact of the pest on crop yields.
-\n\n• Insecticide Application: If leaffolder populations are high and other control methods are insufficient, targeted insecticide applications can be considered.
-        Consult with local agricultural extension services or entomologists to choose the right insecticide and application method.</string>
-    <string name="leaffolderContent3">The main effect of rice leaf litter is the reduction of rice yield. The larvae of this pest feed on the green tissues of rice plants, including leaves, stems, and ears. This feeding damage reduces the ability of plants to photosynthesize,
-          leading to stunted growth and reduced grain production. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-
-    //stemborer
-    <string name="stemborerContent1">Rice stem borers are a group of insect pests that can have significant negative impacts on rice production. These pests belong to various species of moths and beetles, with the larvae (caterpillars) being the primary culprits.
-        The most common rice stem borers include the yellow stem borer (Scirpophaga incertulas) and the striped stem borer (Chilo suppressalis).</string>
-    <string name="stemborerContent2">• Use Resistant Varieties: Plant rice varieties that are resistant or tolerant to stem borers. Resistant varieties can significantly reduce the impact of these pests on the crop
-            \n\n• Natural Enemies: Encourage natural enemies of stem borers, such as parasitoid wasps and predators like birds and spiders, which feed on stem borer eggs and larvae.
-            \n\n• Pesticides: Insecticides can be used when the pest population reaches an economic threshold and other control methods are not sufficient. Consult with local agricultural authorities or entomologists to determine the appropriate insecticides and application methods.
-\n\n• Integrated Pest Management (IPM): Implement an IPM approach, combining various control methods judiciously to minimize the use of chemical pesticides and reduce the impact on non-target organisms and the environment.
-\n\n• Proper Application: If pesticides are necessary, apply them at the recommended dosage and timing.
-        Follow safety guidelines and local regulations regarding pesticide use.</string>
-    <string name="stemborerContent3">Rice stem borers damage rice plants by tunneling through the stems and feeding on the inner tissues. This feeding activity weakens the stems, reducing the plants ability to stand upright. As a result, rice plants can be straightened (fall over),
-          leading to reduced grain filling and yield loss. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
-
-    //tungro
-    <string name="tungroContent1">Rice tungro disease is a viral disease that affects rice plants. It is caused by the rice tungro spherical virus (RTSV) and the rice tungro bacilliform virus (RTBV),
-        both of which are transmitted by the green leafhopper insect (Nephotettix virescens). This disease primarily affects rice crops and can lead to significant reductions in yield and quality.</string>
-    <string name="tungroContent2">• Use Resistant Varieties: Plant rice varieties that are resistant to tungro disease. Resistant varieties can significantly reduce the impact of the disease on your crops.
-            \n\n• Early Planting: Planting rice early in the season can help avoid the peak period of green leafhopper activity, reducing the chances of transmission of the virus.
-            \n\n• Rouging: Remove and destroy infected plants as soon as symptoms are visible. This helps in reducing the source of the virus and prevents its spread to healthy plants.
-\n\n• Insecticide Application: Proper and timely application of insecticides can help control the green leafhopper population, which is responsible for transmitting the virus. Consult with agricultural experts or entomologists for advice on suitable insecticides and their application schedules.
-\n\n• Biological Control: Introduce natural predators and parasites of the green leafhopper, such as spiders and predatory insects, to help control their population naturally.</string>
-    <string name="tungroContent3">Infected plants typically show stunted growth, reduced tillering, and smaller panicles.
-         This leads to a significant decrease in the overall rice yield per hectare. there is a formula to calculate to get the estimated damage of that disease if it affects the plant. damage = area planted (ha) x 0.1 (if the damage is at 10%) or 0.3 (if the damage is at 30%)
-\n\n <b>DISCLAIMER:</b> this computation is based on the estimation of the damage provided by the City Agricultural Office (CAGRO). other information on the computation method can be asked by the experts.\n\n</string>
 
     //Activity_book_card1
     <string name="title_card1.1">Seed Selection</string>

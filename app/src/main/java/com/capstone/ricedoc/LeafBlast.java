@@ -62,14 +62,11 @@ public class LeafBlast extends AppCompatActivity {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                            TextView head1 = findViewById(R.id.head1);
                             TextView content1 = findViewById(R.id.content1);
-                            TextView head2 = findViewById(R.id.head2);
                             TextView content2 = findViewById(R.id.content2);
+                            TextView content3 = findViewById(R.id.content3);
 
-                            String disease = document.getString("Disease");
                             String diseaseInfo = document.getString("DiseaseInfo");
-                            String treatment = document.getString("Treatment");
                             String disclaimer = document.getString("Disclaimer");
 
                             List<Object> treatmentInfoList = (List<Object>) document.get("TreatmentInfo");
@@ -86,9 +83,8 @@ public class LeafBlast extends AppCompatActivity {
                                 Log.e("Error", "TreatmentInfo is null");
                             }
 
-                            head1.setText(disease);
                             content1.setText(diseaseInfo);
-                            head2.setText(treatment);
+                            content3.setText(disclaimer);
                         }
 
                     }

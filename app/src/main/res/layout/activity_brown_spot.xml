@@ -85,7 +85,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="@string/brownspotContent1"
+            android:text=""
             />
 
         <TextView
@@ -109,7 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="@string/brownspotContent2"
+            android:text=""
             />
 
         <TextView
@@ -133,7 +133,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="@string/brownspotContent3"
+            android:text=""
             />
 
 
