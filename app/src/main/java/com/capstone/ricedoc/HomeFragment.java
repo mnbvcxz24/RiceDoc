@@ -63,13 +63,6 @@ public class HomeFragment extends Fragment {
 
         btnLanguage = view.findViewById(R.id.btnLanguage);
 
-        // CHECK NETWORK CONNECTIVITY
-        if (isNetworkAvailable()) {
-
-        } else {
-            Toast.makeText(requireContext(), "You are currently OFFLINE", Toast.LENGTH_SHORT).show();
-        }
-
         //CLICK LISTENER FOR THE LANGUAGE BUTTON
         btnLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
