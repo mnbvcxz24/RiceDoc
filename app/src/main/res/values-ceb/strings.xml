@@ -4,23 +4,6 @@
     <string name="home_text">Home</string>
     <string name="books_text">Libro</string>
     <string name="history_text">History</string>
-    <string-array name="barangay">
-        <item>Manay</item>
-        <item>Southern Davao</item>
-        <item>Nanyo</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
     <string name="lang">CEB</string>
     <string name="phase1">Pagkuha og picture</string>
     <string name="phase2">Kuhaa ang result</string>
@@ -37,11 +20,11 @@
     <string name="content_card1.2">Gamit sa rekomendation matang sa &quot;Certified seeds&quot;</string>
     <string name="content_card1.3">Ang Binhi sa mas gipalambo nga matang sa humay nga sertipikado sa &quot;National Seed Quality Control Services&quot;(NCSQCS) ma-ilhan o mapamatud-an kini pinaagi sa asul nga tarheta (tag) nga nasukip o gipalit sa sako. Mahimo usab nga mogamit sa &quot;Foundation o registered seeds&quot; gikan sa masaligan nga mga ahensya sama sa PhilRice ug mga akreditadong magbibinhi</string>
     <string name="title_card1.4">Mga kinaiya sa sertipikasyong binhi</string>
-    <string name="content_card1.5">•Limpyo og walay sagol o puro. \n•Tibook o parehas ang porma ug gidagkuon sa mga lugas. \n•85 porsyento o labaw pa ang &quot;germination rate&quot; o gidaghanon sa moturok.</string>
+    <string name="content_card1.5">• Limpyo og walay sagol o puro. \n\n• Tibook o parehas ang porma ug gidagkuon sa mga lugas. \n\n• 85 porsyento o labaw pa ang &quot;germination rate&quot; o gidaghanon sa moturok.</string>
     <string name="title_card1.6">Kamahinungdanon</string>
     <string name="content_card1.7">Ang paggamit sa sertipikadong binhi moresulta sa himsong nga mga tagod nga paspas ug tupong ang pagtubo. Makatabang kini sa pagpadugang sa abot sa humay og mga 5-10 porsyento.</string>
     <string name="title_card1.8">Mga Rekomendasyon</string>
-    <string name="content_card1.9">Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum (&quot;technology demonstration&quot; o &quot;adaptability trial&quot;) sa inyong lugar. \n\nMagtanum ug mga matang sa humay nga dali lang mugulang o kadtong makalahutay bisan mahumol sa tubig didto sa mga ubos nga lugar ug sagad gibnabaha panahon sa ting-ulan.\n\nAng mga barayti nga angay itanum ngadto sa ubos nga lugar ug adunay patubig mao ang: PSB Rc10 (Pagsanjan), NSIC Rc130 (Tubigan 3), NSIC Rc152 (Tubigan 10), NSIC Rc134 (Tubigan 4) ug NSIC Rc160 (Tubigan 14).\n\nAlang sa ubos nga lugar nga nagasalig sa tubig-ulan: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). Kini nga mga barayti sa humay makasugakod usab sa hulaw. /n/n Alang ngadto sa upland o mga taas nga lugar nga sagad makasinati ug hulaw: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan).\n\n\n</string>
+    <string name="content_card1.9">Gamit sa matang sa hanay nga adunay potensyal nga makahatag og taas nga abot, himalitan sa merkado (sa mga traders/NFA), ug nagpailalum na sa pagsulay ug tanum (&quot;technology demonstration&quot; o &quot;adaptability trial&quot;) sa inyong lugar. \nMagtanum ug mga matang sa humay nga dali lang mugulang o kadtong makalahutay bisan mahumol sa tubig didto sa mga ubos nga lugar ug sagad gibnabaha panahon sa ting-ulan.\nAng mga barayti nga angay itanum ngadto sa ubos nga lugar ug adunay patubig mao ang: PSB Rc10 (Pagsanjan), NSIC Rc130 (Tubigan 3), NSIC Rc152 (Tubigan 10), NSIC Rc134 (Tubigan 4) ug NSIC Rc160 (Tubigan 14).\nAlang sa ubos nga lugar nga nagasalig sa tubig-ulan: NSIC Rc192 (Sahod Ulan1), PSB Rc14 (Rio Grande), and PSB Rc68 (Sacobia). Kini nga mga barayti sa humay makasugakod usab sa hulaw. Alang ngadto sa upland o mga taas nga lugar nga sagad makasinati ug hulaw: PSB Rc80 (Pasig), PSB Rc9 (Apo), and NSIC Rc23 (Katihan).</string>
 
     //Activity_book_card2
     <string name="title_card2.1">Pag-andam sa Uma</string>
@@ -50,7 +33,7 @@
     <string name="title_card2.4">Kamanghinundanon</string>
     <string name="content_card2.5">Ang maayong pagpkapatag sa basakan makatabang alang sa maayos ug madaginoton nga pagdumala sa irigasyon o patubig, ug makapasayon usab sa pagdumala sa mga sagbot ug sa dangan nga kuhol.</string>
     <string name="title_card2.6">Mga Rekomendasyon</string>
-    <string name="content_card2.7">• Ayoha ug limpyohi ang mga kanal ug pilapilan.\n\n• Daruha ang mga sagbot ug inanihan o ginarabahan. Pakasari ng basakan makadauha ka higayon o labaw pa (lat-angi og usa ka semana matag pakaras).\n\n• Pataga ang yuta.\n\n</string>
+    <string name="content_card2.7">• Ayoha ug limpyohi ang mga kanal ug pilapilan.\n\n• Daruha ang mga sagbot ug inanihan o ginarabahan. Pakasari ng basakan makadauha ka higayon o labaw pa (lat-angi og usa ka semana matag pakaras).\n\n• Pataga ang yuta.</string>
 
     //Activity_book_card3
     <string name="title_card3.1">Pagtanum</string>
@@ -66,7 +49,7 @@
     <string name="title_card3.10">Kamahinungdanon</string>
     <string name="content_card3.11">Ang himsog nga mga tagod o tanum dali motubo o molabong ug makasarang pakigkompetinsya sa mga sagbot.</string>
     <string name="title_card3.12">Mga Rekomedasyon</string>
-    <string name="content_card3.13">• Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n• Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag.\n\n </string>
+    <string name="content_card3.13">• Paghimo ug taguran nga duol sa tinubdan sa tubig, ug panalipdi kini batok sa mga dangan, labi na batok sa mga langgam, kuhol ug ilaga. Kinahanglan usab nga ang taguran adunay maayong pagkamugna nga kanal aron mapasayon ang pagpahubas sa tubig.\n\n• Alang sa ginasabwag nga binhi. Ang basak andam ng sabwagan og pinaturok nang daan nga binhi human madaro ug mapakaras. Ang mga gisabwag nga binhi kinahanglan panalipdan batok sa mga langgam, kuhol, ilaga ug mga sagbot, subay sa hustong pamaagi sa pagdumala sa mga dangan. Isabwag ang pinaturok na daan nga mga binhi, sa parehas nga gidaghanon, (matag luna), diha sa basak nga maayo ang pagka andam ug pagkapatag. </string>
 
     //Activity_book_card4
     <string name="title_card4.1">Pagdumala sa sustansya</string>
@@ -79,7 +62,7 @@
     <string name="title_card4.8">Kamanghinungdanon</string>
     <string name="content_card4.9">Ang pagbaton og igong sustansya gikan sa pagpangsipak hangtud sa &quot;paglilihi&quot; ug pagpamuswak, makatabang alang sa maayong pagtubo sa humay, pagmugna og mga uhay, ug pagkab-ot sa labing taas nga abot, sumala sa masarangan sa matang sa humay. Ang gidaghanon sa uhay mahimong basehan sa gidaghanon usab sa abot.</string>
     <string name="title_card4.10">Mga Rekomendasyon</string>
-    <string name="content_card4.11">•Suta-a ug ihatag sa tanum ang gikinahanglan niining nitroheno pinasikad sa nabasa sa LCC, ug ingon man usab ang uban pang mga sustansyang gikinahnglan sa humay sumala sa MOET o sa &quot;Nutrient Ommision Plot.&quot;\n\n•Nitroheno(N). Gamita ang LCC matag pito ka adlaw gikan sa 14 ka adlaw human og balhin-tanum o mga 21 ka adlaw gikan sa pagsabwag-tanum, hangtud nga kini mobuswak o mamulak na. Apan, nga kung nagsabwag og kumpletong abono o 14-14-14-12S sa ika-14 ka adlaw human sa pagbalhin-tanum, o 21 ka adlaw sa pagsabwag-tanum, ang pagbasa sa LCC kinahanglan sugdan sa ika-21 na ka adlaw human sa pagbalhin-tanum, o sa ika-28 ka adlaw human sa pagsabwag-tanum.\n\n•Posporos(P) ug Potasyum(K). Ang gidaghanon ug matang sa abonong naghupot og Pk ug K, sama sa 14-14-14-12S, 16-20-0, 0-18-0, ug 0-0-60 nga gamiton, mag-agad sa panahon sa pagtanum, matang sa yuta, gitumong nga abot, presyo, ug sa pagkahimalitan niini.\n\n•Sulfur(S). Ang gidaghanon sa sulfur nga anaa sa 14-14-14-12S (12%) nga girekomndar sa Talaan 2 igo na nga makatubag sa Kakulangon sa sulfur.\n\n•Zinc(Zn). Kung kulang sa zinc, gamiti o butangi og 25 ka kilong &quot;zinc sulfate&quot; matag ektarya, sa ika-14 ka adlaw gikan sa pagbalhin-tanum. Usa lamang ka higayon kini himoa sulod usa sa ka tuig. Ang zinc, usa sa matang sa &quot;micronutrient&quot; nga kasagarang kulang diha sa mga basakan. Ang sintomas sa kakulang niini mamatikdan paglabay sa 2-4 ka semana gikan sa pagbalhin-tanum.\n\n</string>
+    <string name="content_card4.11">• Suta-a ug ihatag sa tanum ang gikinahanglan niining nitroheno pinasikad sa nabasa sa LCC, ug ingon man usab ang uban pang mga sustansyang gikinahnglan sa humay sumala sa MOET o sa &quot;Nutrient Ommision Plot.&quot;\n\n• Nitroheno(N). Gamita ang LCC matag pito ka adlaw gikan sa 14 ka adlaw human og balhin-tanum o mga 21 ka adlaw gikan sa pagsabwag-tanum, hangtud nga kini mobuswak o mamulak na. Apan, nga kung nagsabwag og kumpletong abono o 14-14-14-12S sa ika-14 ka adlaw human sa pagbalhin-tanum, o 21 ka adlaw sa pagsabwag-tanum, ang pagbasa sa LCC kinahanglan sugdan sa ika-21 na ka adlaw human sa pagbalhin-tanum, o sa ika-28 ka adlaw human sa pagsabwag-tanum.\n\n• Posporos(P) ug Potasyum(K). Ang gidaghanon ug matang sa abonong naghupot og Pk ug K, sama sa 14-14-14-12S, 16-20-0, 0-18-0, ug 0-0-60 nga gamiton, mag-agad sa panahon sa pagtanum, matang sa yuta, gitumong nga abot, presyo, ug sa pagkahimalitan niini.\n\n• Sulfur(S). Ang gidaghanon sa sulfur nga anaa sa 14-14-14-12S (12%) nga girekomndar sa Talaan 2 igo na nga makatubag sa Kakulangon sa sulfur.\n\n• Zinc(Zn). Kung kulang sa zinc, gamiti o butangi og 25 ka kilong &quot;zinc sulfate&quot; matag ektarya, sa ika-14 ka adlaw gikan sa pagbalhin-tanum. Usa lamang ka higayon kini himoa sulod usa sa ka tuig. Ang zinc, usa sa matang sa &quot;micronutrient&quot; nga kasagarang kulang diha sa mga basakan. Ang sintomas sa kakulang niini mamatikdan paglabay sa 2-4 ka semana gikan sa pagbalhin-tanum.</string>
 
     //Activity_book_card5
     <string name="title_card5.1">Pagdumala sa Patubig</string>
@@ -88,7 +71,7 @@
     <string name="title_card5.5">Kamahinungdanon</string>
     <string name="content_card5.6">Ang tubig mao ang magadala sa mga sustansya gikan sa yuta paingon ngadto sa lain-laing bahin sa tanum. Ang husto nga patubig moresulta sa mga himsog nga tanum, nga maanindot ang bulas, normal ang pagtubo, ug daku ang ani.</string>
     <string name="title_card5.7">Mga rekomendasyon</string>
-    <string name="content_card5.8">•Kinahanglan nga ang giladmon sa tubig sa basakan mga 3.5 sentimetro, gikan sa panahon sa pagpangsipak hangtud mga 1-2 ka semana na dili pa mag-ani. Pahubsi ang mga basakan 1-2 ka semana sa dili pa mag-ani.\n\n•Alang sa mga yuta nga galas, Pahubsi ang basakan mga usa ka semana sa dili pa mag-ani.\n\n•Apan sa mga yuta nga lagkitin o lapokon, ipahigayon ang pagpahubas sa tubig sa basakan mga duha ka semana sa dili pa mag-ani.\n\n</string>
+    <string name="content_card5.8">• Kinahanglan nga ang giladmon sa tubig sa basakan mga 3.5 sentimetro, gikan sa panahon sa pagpangsipak hangtud mga 1-2 ka semana na dili pa mag-ani. Pahubsi ang mga basakan 1-2 ka semana sa dili pa mag-ani.\n\n• Alang sa mga yuta nga galas, Pahubsi ang basakan mga usa ka semana sa dili pa mag-ani.\n• Apan sa mga yuta nga lagkitin o lapokon, ipahigayon ang pagpahubas sa tubig sa basakan mga duha ka semana sa dili pa mag-ani.</string>
 
     //Activity_book_card6
     <string name="title_card6.1">Pagdumala sa mga Dangan</string>
@@ -97,17 +80,17 @@
     <string name="title_card6.4">Kamanghinungdanon</string>
     <string name="content_card6.5">Ang pagdumala sa mga dangan usa ka mahinungdanon bahin sa pagbasakan o pagpanguma og humay. Ang kasayuran mahitungod sa kalambigitan o inter-aksyon sa humay ug sa mga linalang (nga adunay kinabuhi) nga maka-apekto sa pagtubo niini (biotic factors), palibot (agro-ecosystem), ug pamaagi o sistema sa pag-galam sa tanum, seguradong makatabng sa pagdeterminar sa katakus sa mga dangan nga mohimog kadaut sa humayan.</string>
     <string name="title_card6.6">Mga Rekomendasyon</string>
-    <string name="content_card6.7">•Pili-a nga itanum ang mga matang sa humay nga taas ang resistensya batok sa mga dangan ug sakit nga kasagaran diha sa imong lugar.\n\n•Panalipdi (alagaan) ang mga makatabang o mapuslanon nga mga organismo.\n\n•Ipahigayon ang regular nga pagsusi sa humayan ug sumpoa ang mga dangan sa humay sama sa insekto, sakit, mga sagbot, ilaga, kuhol, ug mga langgam. Labing maayo kung tibook barangay o kumunidad ang magtinabangay sa pagpahigayon niini.\n\n</string>
+    <string name="content_card6.7">• Pili-a nga itanum ang mga matang sa humay nga taas ang resistensya batok sa mga dangan ug sakit nga kasagaran diha sa imong lugar.\n\n• Panalipdi (alagaan) ang mga makatabang o mapuslanon nga mga organismo.\n\n• Ipahigayon ang regular nga pagsusi sa humayan ug sumpoa ang mga dangan sa humay sama sa insekto, sakit, mga sagbot, ilaga, kuhol, ug mga langgam. Labing maayo kung tibook barangay o kumunidad ang magtinabangay sa pagpahigayon niini.</string>
 
     //Activity_book_card7
     <string name="title_card7.1">Pagpili sa Binhi</string>
     <string name="content_card7.2">Aniha ug gi-oka ang humay sa tukmang higayon</string>
-    <string name="content_card7.3">Aniha ang humay kung 20 porsyento sa mga lugas sa tumoy sa uhay kay bato na kagahi, o kung daw kolor bulawan(golden) na ang kadaghanan sa mga lugas sa uhay niini.\n\n\nMa-ilhan kung gahi ang mga lugas sa humay pinaagi sa pagpislit niini ginamit ang tudlo sa kumagko.</string>
+    <string name="content_card7.3">Aniha ang humay kung 20 porsyento sa mga lugas sa tumoy sa uhay kay bato na kagahi, o kung daw kolor bulawan(golden) na ang kadaghanan sa mga lugas sa uhay niini.\n\nMa-ilhan kung gahi ang mga lugas sa humay pinaagi sa pagpislit niini ginamit ang tudlo sa kumagko.</string>
     <string name="title_card7.4">Kamanghinungdanon</string>
     <string name="content_card7.5">Ang hustong pag-ani ug paggi-ok moresulta sa kalidad nga mga lugas sa humay, ug mahimo kining ibaligya og mahal sa merkado.</string>
     <string name="title_card7.6">Mga Rekomendasyon</string>
-    <string name="content_card7.7">•Aniha ang humay kung kolor bulawan (golden) na ang 80% sa mga lugas o kung mga 20-25 porsyento na lamang ang gihuptan nga kabasaon o &quot;moisture content&quot; niini, sa ting-ulan ug 18-21% kung ting-init.\n\n•Gisugyot nga mogamit og &quot;grain moisture meter&quot;\n\n•Gi-oka ang humay sulod sa panahon nga dili molapas sa usa ka adlaw gikan sa pag-ani sa panahon sa ting-ulan, ug dili molapas sa duha ka adlaw, sa panahon sa tig-init.\n\n•Seguradoha nga hinlo o limpyo ang makinang panggi-ok (thresher) ug husto usab ang &quot;setting&quot; niini</string>
+    <string name="content_card7.7">• Aniha ang humay kung kolor bulawan (golden) na ang 80% sa mga lugas o kung mga 20-25 porsyento na lamang ang gihuptan nga kabasaon o &quot;moisture content&quot; niini, sa ting-ulan ug 18-21% kung ting-init.\n• Gisugyot nga mogamit og &quot;grain moisture meter&quot;\n• Gi-oka ang humay sulod sa panahon nga dili molapas sa usa ka adlaw gikan sa pag-ani sa panahon sa ting-ulan, ug dili molapas sa duha ka adlaw, sa panahon sa tig-init.\n• Seguradoha nga hinlo o limpyo ang makinang panggi-ok (thresher) ug husto usab ang &quot;setting&quot; niini</string>
     <string name="title_card7.8">Pagpa-uga sa humay</string>
-    <string name="content_card7.9">Paugahon ang basa nga humay sulod sa 24 oras pagkahuman gi-ani aron malikayan ang pagpangitom niini. Ania ang pipili ka mga pamaagi sa pagpa-uga sa humay: \n\n•Ibulad sa adlaw, o di kaha,\n\n•Muagamit ug mekanikal nga pasilidad sama sa Flat Bed Dryer (FBD) hilabina kung panahon sa ting-ulan. Ang FBD adunay kapasidad nga makapauga ug 120 ka sako sa humay sulod sa 10 hangtod 12 ka oras. KUng mugamit ug FBD, siguradahon nga sundon ang saktong oras sa pagpauga aron dili kini muresulta sa ubos nga kalidad sa mga lugas sa humay.\n\n</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_card7.9">Paugahon ang basa nga humay sulod sa 24 oras pagkahuman gi-ani aron malikayan ang pagpangitom niini. Ania ang pipili ka mga pamaagi sa pagpa-uga sa humay: \n\n• Ibulad sa adlaw, o di kaha, Muagamit ug mekanikal nga pasilidad sama sa Flat Bed Dryer (FBD) hilabina kung panahon sa ting-ulan. Ang FBD adunay kapasidad nga makapauga ug 120 ka sako sa humay sulod sa 10 hangtod 12 ka oras. KUng mugamit ug FBD, siguradahon nga sundon ang saktong oras sa pagpauga aron dili kini muresulta sa ubos nga kalidad sa mga lugas sa humay.</string>
+
 </resources>

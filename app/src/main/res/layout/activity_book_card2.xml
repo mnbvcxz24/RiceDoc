@@ -1,111 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    tools:context="com.capstone.ricedoc.BookCard2"
     android:background="#EEFFE6">
 
-    <RelativeLayout
+    <include layout="@layout/backbutton_toolbar_layout" />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        tools:context="com.capstone.ricedoc.BookCard2">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:textSize="14pt"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_card2.1"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="1dp"/>
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="20dp"
-            android:text="@string/content_card2.2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textView"
+                android:textSize="14pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_card2.1"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"/>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:layout_below="@+id/textView2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/uma"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/content_card2.2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:textSize="11pt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="#00FFFFFF"
-            android:text="@string/content_card2.3"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/uma"/>
 
-        <TextView
-            android:id="@+id/textView4"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:gravity="start"
-            android:text="@string/title_card2.4"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView3"
+                android:textSize="11pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="@string/content_card2.3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:textSize="11pt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="#00FFFFFF"
-            android:text="@string/content_card2.5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <TextView
+                android:id="@+id/textView4"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="start"
+                android:text="@string/title_card2.4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_marginHorizontal="20dp"
-            android:gravity="start"
-            android:layout_marginTop="20dp"
-            android:text="@string/title_card2.6"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/textView5"
+                android:textSize="11pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="@string/content_card2.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:textSize="11pt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView6"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="#00FFFFFF"
-            android:text="@string/content_card2.7"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/textView6"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="start"
+                android:layout_marginTop="20dp"
+                android:text="@string/title_card2.6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:textSize="11pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="@string/content_card2.7"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
