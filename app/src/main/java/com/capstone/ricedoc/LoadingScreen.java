@@ -1,7 +1,5 @@
 package com.capstone.ricedoc;
 
-import static androidx.core.content.ContentProviderCompat.requireContext;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +11,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -35,7 +31,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.UUID;
 
 public class LoadingScreen extends AppCompatActivity {
 
@@ -57,13 +52,13 @@ public class LoadingScreen extends AppCompatActivity {
 
             // load deviceId
             SharedPreferences preferences = getSharedPreferences("pref", Context.MODE_PRIVATE);
-            String deviceId = preferences.getString("deviceId", "");
+            String userId = preferences.getString("userId", "");
 
             // Load the selectedLocation in sharedpreference
             String selectedLocation = preferences.getString("selected_location", "");
 
             if(TextUtils.isEmpty(selectedLocation)) {
-                Toast.makeText(LoadingScreen.this, "Please Select Location First", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoadingScreen.this, "Please select a location first.", Toast.LENGTH_LONG).show();
                 onBackPressed();
             } else {
 
@@ -73,45 +68,45 @@ public class LoadingScreen extends AppCompatActivity {
                     float confidenceValue = Float.parseFloat(cleanedConPercentage);
 
                     if (confidenceValue < 80.0) {
-                        Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try rotate the image or crop.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoadingScreen.this, "The image is blurry or unclear. Please try rotating or cropping it.", Toast.LENGTH_LONG).show();
                         onBackPressed();
                         return;
                     }
 
                     if ("Brown Spot".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, BrownSpot.class);
                     } else if ("Healthy".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, Healthy.class);
                     } else if ("Leaf Blast".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, LeafBlast.class);
                     } else if ("Leaf Folder".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, LeafFolder.class);
                     } else if ("Sheath Blight".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, SheathBlight.class);
                     } else if ("Stem Borer".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, StemBorer.class);
                     } else if ("Tungro Virus".equals(result)) {
                         saveImage(imageByteArray, dateTime, selectedLocation);
-                        uploadData(deviceId, selectedLocation, result, cleanedConPercentage, dateTime);
+                        uploadData(userId, selectedLocation, result, cleanedConPercentage, dateTime);
                         finalIntent = new Intent(LoadingScreen.this, Tungro.class);
                     } else if ("Unknown".equals(result)) {
-                        Toast.makeText(LoadingScreen.this, "Please make sure that only the rice leaf is captured. Please try again.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoadingScreen.this, "Ensure only the rice leaf is captured. Please try again.", Toast.LENGTH_LONG).show();
                         onBackPressed();
                         return;
                     } else {
-                        Toast.makeText(LoadingScreen.this, "The image is blur or unclear. Please try rotate the image or crop.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoadingScreen.this, "The image is blurry or unclear. Please try rotating or cropping it.", Toast.LENGTH_LONG).show();
                         onBackPressed();
                         return;
                     }
@@ -127,7 +122,7 @@ public class LoadingScreen extends AppCompatActivity {
             }
         }
     }
-    private void uploadData(String deviceId, String selectedLocation, String result, String cleanedConPercentage, Timestamp dateTime){
+    private void uploadData(String userId, String selectedLocation, String result, String cleanedConPercentage, Timestamp dateTime){
         Map<String, Object> data = new HashMap<>();
 
         Date date = dateTime.toDate();
@@ -135,7 +130,7 @@ public class LoadingScreen extends AppCompatActivity {
         String dateScan = sdf.format(date);
         String imageFileName = "IMG_" + dateScan + "_" + selectedLocation + ".jpg";
 
-        data.put("UniqueDeviceID", deviceId);
+        data.put("UniqueUserID", userId);
         data.put("Barangay", selectedLocation);
         data.put("Result", result);
         data.put("Confidence", cleanedConPercentage + "%");
@@ -145,17 +140,7 @@ public class LoadingScreen extends AppCompatActivity {
 
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("recent_scans");
-        collectionReference.add(data).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Log.d("Firestore", "Document added with ID: " + documentReference.getId());
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.e("Firestore", "Error adding document", e);
-            }
-        });
+        collectionReference.add(data).addOnSuccessListener(documentReference -> Log.d("Firestore", "Document added with ID: " + documentReference.getId())).addOnFailureListener(e -> Log.e("Firestore", "Error adding document", e));
     }
     private void saveImage(byte[] imageByteArray, Timestamp dateTime, String selectedLocation){
         Bitmap imageBitmap = BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length);

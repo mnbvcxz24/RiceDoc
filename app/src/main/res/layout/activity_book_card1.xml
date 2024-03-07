@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:gravity="center">
@@ -39,8 +39,6 @@
                 android:justificationMode="inter_word"
                 android:text="@string/content_card1.2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:layout_below="@+id/textView"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="20dp"/>
 
@@ -48,8 +46,6 @@
                 android:id="@+id/imageView"
                 android:layout_width="300dp"
                 android:layout_height="150dp"
-                android:layout_below="@+id/textView2"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/riceseeds"/>
 
@@ -59,7 +55,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/imageView"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#00FFFFFF"
                 android:text="@string/content_card1.3"
@@ -71,7 +66,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
                 android:layout_marginTop="15dp"
                 android:gravity="start"
                 android:layout_marginHorizontal="20dp"
@@ -85,7 +79,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView4"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -97,7 +90,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView5"
                 android:layout_marginTop="15dp"
                 android:layout_marginHorizontal="20dp"
                 android:text="@string/title_card1.6"
@@ -110,7 +102,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView6"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -122,7 +113,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView7"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:text="@string/title_card1.8"
@@ -135,7 +125,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView8"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"

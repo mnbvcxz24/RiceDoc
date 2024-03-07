@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
@@ -43,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         firebaseFirestore.setFirestoreSettings(settings);
 
-        // Generate devicId
+        // Generate userId
         SharedPreferences preferences = getSharedPreferences("pref", Context.MODE_PRIVATE);
-        String deviceId = preferences.getString("deviceId", "");
+        String userId = preferences.getString("userId", "");
 
         // check if deviceId in sharedpreference is empty
-        if(TextUtils.isEmpty(deviceId)){
-            String uniqueID = UUID.randomUUID().toString();
-            String androidId = generateAndroidID();
-            String uniqueDeviceId = uniqueID + "_" + androidId;
+        if(TextUtils.isEmpty(userId)){
+            String uniqueID1 = UUID.randomUUID().toString();
+            String uniqueID2 = UUID.randomUUID().toString();
+            String uniqueUserId = uniqueID1 + "_" + uniqueID2;
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putString("deviceId", uniqueDeviceId);
+            editor.putString("userId", uniqueUserId);
             editor.apply();
         }
 
@@ -78,13 +77,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-    private String  generateAndroidID() {
-        String androidId = android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-        // generate another UUID if the androidId return null
-        if (androidId == null || androidId.isEmpty()){
-            return UUID.randomUUID().toString();
-        }
-        return androidId;
     }
 }

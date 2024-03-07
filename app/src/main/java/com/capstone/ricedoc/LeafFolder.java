@@ -10,6 +10,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +33,14 @@ public class LeafFolder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaf_folder);
+
+        ImageButton btnBack = this.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         String result = getIntent().getStringExtra("text");
         diseasename = findViewById(R.id.diseasename);
@@ -71,7 +81,7 @@ public class LeafFolder extends AppCompatActivity {
                                 StringBuilder htmlStringBuilder = new StringBuilder();
 
                                 for (int i = 0; i < treatmentInfo.length; i++) {
-                                    htmlStringBuilder.append("<b>").append("•").append(". </b>").append(treatmentInfo[i]).append("<br/><br/>");
+                                    htmlStringBuilder.append("<b>").append("•").append("</b>" ).append(treatmentInfo[i]).append("<br/><br/>");
                                 }
                                 content2.setText(Html.fromHtml(htmlStringBuilder.toString()));
                             } else {

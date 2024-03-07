@@ -25,14 +25,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
-import com.google.firebase.database.*;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -40,11 +38,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Locale;
-import java.util.Set;
 
 public class HistoryFragment extends Fragment {
 
@@ -59,9 +54,8 @@ public class HistoryFragment extends Fragment {
 
         // CHECK NETWORK CONNECTIVITY
         if (isNetworkAvailable()) {
-
         } else {
-            Toast.makeText(requireContext(), "You are currently OFFLINE", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "You are offline. Please check your internet connection and try again.", Toast.LENGTH_SHORT).show();
         }
 
         // LOAD THE CURRENT LOCATION SELECTED
@@ -78,13 +72,13 @@ public class HistoryFragment extends Fragment {
 
         // LOAD DEVICE ID
         SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
-        String deviceId = preferences.getString("deviceId", "");
+        String userId = preferences.getString("userId", "");
 
         // LOAD RECENT SCANS DATA FROM FIREBASE
         FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         CollectionReference collectionReference = firebaseFirestore.collection("recent_scans");
 
-        collectionReference.whereEqualTo("UniqueDeviceID", deviceId)
+        collectionReference.whereEqualTo("UniqueUserID", userId)
                 .whereEqualTo("Barangay", loadSelectedLocation())
                 .orderBy("Date", Query.Direction.DESCENDING).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -128,7 +122,7 @@ public class HistoryFragment extends Fragment {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DialogDeviceId().show(getChildFragmentManager(), "dialogDeviceId");
+                new DialogUserId().show(getChildFragmentManager(), "dialogUserId");
             }
         });
 

@@ -1,7 +1,6 @@
 package com.capstone.ricedoc;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -15,11 +14,6 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -33,7 +27,7 @@ import java.util.List;
 import java.util.Set;
 
 public class DialogLocation extends DialogFragment {
-    private Set<String> barangaySet = new HashSet<>();
+    private final Set<String> barangaySet = new HashSet<>();
     AlertDialog dialog1, dialog2;
 
     @NonNull
@@ -65,7 +59,7 @@ public class DialogLocation extends DialogFragment {
                                     "Pilar, Southern Davao", "Quezon", "San Roque", "Southern Davao");
                             barangaySet.addAll(staticBarangays);
                             showSecondDialog();
-                            Toast.makeText(requireContext(), "No Internet Connection, Using Offline List Barangay", Toast.LENGTH_LONG).show();
+                            Toast.makeText(requireContext(), "No internet connection. Using offline barangay list", Toast.LENGTH_LONG).show();
                         }
                     }
                 })

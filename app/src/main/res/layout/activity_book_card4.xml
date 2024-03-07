@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:gravity="center">
@@ -31,7 +30,6 @@
                 android:text="@string/title_card4.1"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:layout_centerHorizontal="true"
                 android:textStyle="bold"/>
 
             <TextView
@@ -40,7 +38,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/content_card4.2"
@@ -50,8 +47,6 @@
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:layout_below="@+id/textView2"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:src="@drawable/sustansya"/>
 
@@ -61,7 +56,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/imageView"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -73,7 +67,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="15dp"
                 android:text="@string/title_card4.4"
@@ -86,7 +79,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView4"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -98,7 +90,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView5"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/title_card4.6"
@@ -111,7 +102,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView6"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -123,7 +113,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView7"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/title_card4.8"
@@ -136,7 +125,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView8"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp"
                 android:backgroundTint="#00FFFFFF"
@@ -148,7 +136,6 @@
                 android:textSize="11pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView9"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/title_card4.10"
@@ -161,7 +148,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:layout_below="@+id/textView10"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"

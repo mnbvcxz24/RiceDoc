@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,136 +8,139 @@
     android:background="#EEFFE6"
     tools:context=".LeafBlast">
 
-    <RelativeLayout
+    <include layout="@layout/backbutton_toolbar_layout" />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/diseasename"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:text=""
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
-
-        <TextView
-            android:id="@+id/typedisease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/diseasename"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="0dp"
-            android:text="Fungal" />
-
-        <ImageView
-            android:id="@+id/imagedisease"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_below="@+id/typedisease"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:id="@+id/confidence"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imagedisease"
-            android:layout_toLeftOf="@id/centerpoint"
-            android:text="Confidence: "/>
-        <TextView
-            android:id="@+id/centerpoint"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_centerHorizontal="true"
-            android:text=""/>
-        <TextView
-            android:id="@+id/confidencelevel"
-            android:layout_width="wrap_content"
-            android:textSize="9pt"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imagedisease"
-            android:layout_toRightOf="@id/centerpoint"
-            android:layout_centerHorizontal="true"
-            android:text=""/>
-
-        <TextView
-            android:id="@+id/head1"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/confidence"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/AboutDisease"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
-
-        <TextView
-            android:id="@+id/content1"
-            android:textSize="9pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/head1"
             android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:justificationMode="inter_word"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text=""
-            />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/head2"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/content1"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/treatment"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            <TextView
+                android:id="@+id/diseasename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <TextView
-            android:id="@+id/content2"
-            android:textSize="9pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/head2"
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:justificationMode="inter_word"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text=""/>
+            <TextView
+                android:id="@+id/typedisease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="0dp"
+                android:text="Fungal" />
 
-        <TextView
-            android:id="@+id/head3"
-            android:textSize="11pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/content2"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/ProjectEstimated"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            <ImageView
+                android:id="@+id/imagedisease"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:id="@+id/content3"
-            android:textSize="9pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/head3"
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text=""
-            />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/confidence"
+                    android:textSize="11pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toStartOf="@id/centerpoint"
+                    android:text="Confidence: "/>
+                <TextView
+                    android:id="@+id/centerpoint"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:text=""/>
+                <TextView
+                    android:id="@+id/confidencelevel"
+                    android:textSize="9pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/centerpoint"
+                    android:layout_centerHorizontal="true"
+                    android:text=""/>
+            </RelativeLayout>
 
+            <TextView
+                android:id="@+id/head1"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/AboutDisease"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/content1"
+                android:textSize="9pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:justificationMode="inter_word"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/head2"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/treatment"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <TextView
+                android:id="@+id/content2"
+                android:textSize="9pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:justificationMode="inter_word"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/head3"
+                android:textSize="11pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/ProjectEstimated"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <TextView
+                android:id="@+id/content3"
+                android:textSize="9pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text=""
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

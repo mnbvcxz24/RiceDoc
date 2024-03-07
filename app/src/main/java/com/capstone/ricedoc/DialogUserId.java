@@ -10,17 +10,17 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-public class DialogDeviceId extends DialogFragment {
+public class DialogUserId extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         if (isAdded()) {
             SharedPreferences preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
-            String deviceId = preferences.getString("deviceId", "No Device ID created");
+            String userId = preferences.getString("userId", "No User ID created");
 
-            builder.setTitle("Device ID")
-                    .setMessage("Your device ID is: " + deviceId)
+            builder.setTitle("User ID")
+                    .setMessage("Your user ID is: " + userId)
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
