@@ -1,12 +1,14 @@
 package com.capstone.ricedoc;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.media.ThumbnailUtils;
 import android.net.ConnectivityManager;
@@ -15,7 +17,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,28 +24,31 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.app.Activity;
-import android.widget.Toolbar;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
+import com.canhub.cropper.CropImage;
+import com.canhub.cropper.CropImageContract;
+import com.canhub.cropper.CropImageContractOptions;
+import com.canhub.cropper.CropImageOptions;
 import com.capstone.ricedoc.ml.Densenet121adam60;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.Arrays;
 import java.util.Locale;
 
 public class HomeFragment extends Fragment {
@@ -53,6 +57,7 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE_CAMERA = 12;
     private static final int REQUEST_CODE_GALLERY = 13;
     private static final int REQUEST_CODE_STORAGE = 14;
+    private static final int REQUEST_CODE_CROP = 15;
     int IMAGE_SIZE = 224;
     Button camera, gallery;
     ImageButton btnLanguage;
@@ -62,7 +67,6 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         btnLanguage = view.findViewById(R.id.btnLanguage);
-
         //CLICK LISTENER FOR THE LANGUAGE BUTTON
         btnLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +76,7 @@ public class HomeFragment extends Fragment {
         });
 
         //PERMISSIONS AND CAMERA/GALLERY BUTTON
-        getPermission();
+        getCameraPermission();
         camera = view.findViewById(R.id.camera);
         Drawable icon = getResources().getDrawable(R.drawable.baseline_photo_camera_24);
         camera.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null);
@@ -98,11 +102,6 @@ public class HomeFragment extends Fragment {
 
         setLocale(loadSelectedLanguage());
         return view;
-    }
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
     private void showLanguageMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(requireContext(), view);
@@ -161,17 +160,7 @@ public class HomeFragment extends Fragment {
         requireActivity().finish();
         requireActivity().startActivity(intent);
     }
-    private boolean getStoragePermission(){
-        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            // Request the permission
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_STORAGE);
-            return false;  // Permission not granted yet
-        } else {
-            return true;   // Permission already granted
-        }
-    }
-    private boolean getPermission() {
+    private boolean getCameraPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 // Camera permission not granted, request it
@@ -187,47 +176,66 @@ public class HomeFragment extends Fragment {
         if (requestCode == REQUEST_CODE_PERMISSION) {
             if (grantResults.length > 0) {
                 if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    this.getPermission();
+                    // Camera permission not granted, request it again
+                    getCameraPermission();
                 }
             }
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == REQUEST_CODE_GALLERY) {
             if (resultCode == Activity.RESULT_OK && data != null) {
-                // Handle the selected image from the gallery
                 Uri selectedImageUri = data.getData();
-                try {
-                    Bitmap originalBitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), selectedImageUri);
-                    int maxDimension = 300;
-                    int dimension = Math.min(maxDimension, Math.min(originalBitmap.getWidth(), originalBitmap.getHeight()));
-                    Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, dimension, dimension);
-                    Bitmap resizedBitmap = Bitmap.createScaledBitmap(originalBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
 
-                    classifyImage(resizedBitmap, thumbnailBitmap);
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                startImageCropper(selectedImageUri);
             } else {
-                Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_LONG).show();
+                Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_SHORT).show();
             }
         } else if (requestCode == REQUEST_CODE_CAMERA) {
             if (resultCode == Activity.RESULT_OK && data != null && data.getExtras() != null) {
                 Bitmap originalBitmap = (Bitmap) data.getExtras().get("data");
-                int dimension = Math.min(originalBitmap.getWidth(), originalBitmap.getHeight());
-                Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, dimension, dimension);
-                Bitmap resizedBitmap = originalBitmap.createScaledBitmap(originalBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
+                Uri tempUri = getImageUri(requireContext(), originalBitmap);
 
-                classifyImage(resizedBitmap, thumbnailBitmap);
+                startImageCropper(tempUri);
             } else {
-                Toast.makeText(requireContext(), "Image capture canceled", Toast.LENGTH_LONG).show();
+                Toast.makeText(requireContext(), "Image capture canceled", Toast.LENGTH_SHORT).show();
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    ActivityResultLauncher<CropImageContractOptions> cropImage = registerForActivityResult(new CropImageContract(), result -> {
+        if (result.isSuccessful()) {
+            Bitmap croppedBitmap = BitmapFactory.decodeFile(result.getUriFilePath(getActivity().getApplicationContext(), true));
+
+            int dimension = Math.min(croppedBitmap.getWidth(), croppedBitmap.getHeight());
+            Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(croppedBitmap, dimension, dimension);
+            Bitmap resizedBitmap = Bitmap.createScaledBitmap(croppedBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
+
+            classifyImage(resizedBitmap, thumbnailBitmap);
+        } else {
+            Toast.makeText(requireContext(), "Image cropping canceled or failed", Toast.LENGTH_LONG).show();
+        }
+    });
+    private void startImageCropper(Uri imageUri) {
+        CropImageOptions cropImageOptions = new CropImageOptions();
+        cropImageOptions.allowRotation = true;
+        cropImageOptions.imageSourceIncludeCamera = true;
+        cropImageOptions.imageSourceIncludeGallery = true;
+        CropImageContractOptions cropImageContractOptions = new CropImageContractOptions(imageUri, cropImageOptions);
+        cropImage.launch(cropImageContractOptions);
+    }
+
+    private Uri getImageUri(Context context, Bitmap bitmap) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+
+        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Title", null);
+        return Uri.parse(path);
     }
 
 

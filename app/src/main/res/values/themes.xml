@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RiceDoc" parent="Theme.Material3.Light.NoActionBar" >
+    <style name="Base.Theme.RiceDoc" parent="Theme.Material3.Dark">
+        <item name="colorPrimaryDark">@color/colorOfStatusBar</item>
+        <item name="actionBarTheme">@style/CropImage</item>
+    </style>
+
+    <style name="CropImage" parent="Theme.AppCompat">
+        <item name="android:background">@color/colorOfStatusBar</item>
+    </style>
+
+    <style name="NoWindowTitle" parent="Theme.Material3.Light">
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/colorOfStatusBar</item>
-
     </style>
 
     <style name="Theme.RiceDoc" parent="Base.Theme.RiceDoc"/>
