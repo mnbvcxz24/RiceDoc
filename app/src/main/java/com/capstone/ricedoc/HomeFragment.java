@@ -56,7 +56,6 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE_PERMISSION = 11;
     private static final int REQUEST_CODE_CAMERA = 12;
     private static final int REQUEST_CODE_GALLERY = 13;
-    private ActivityResultLauncher<CropImageContractOptions> cropImage;
     int IMAGE_SIZE = 224;
     Button camera, gallery;
     ImageButton btnLanguage;
@@ -64,21 +63,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-
-        cropImage = registerForActivityResult(new CropImageContract(), result -> {
-            if (result.isSuccessful()) {
-                Bitmap croppedBitmap = BitmapFactory.decodeFile(result.getUriFilePath(getActivity().getApplicationContext(), true));
-
-                int dimension = Math.min(croppedBitmap.getWidth(), croppedBitmap.getHeight());
-                Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(croppedBitmap, dimension, dimension);
-                Bitmap resizedBitmap = Bitmap.createScaledBitmap(croppedBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
-
-                classifyImage(resizedBitmap, thumbnailBitmap);
-            } else {
-                Toast.makeText(requireContext(), "Image cropping canceled or failed", Toast.LENGTH_LONG).show();
-            }
-        });
 
         btnLanguage = view.findViewById(R.id.btnLanguage);
         //CLICK LISTENER FOR THE LANGUAGE BUTTON
@@ -117,6 +101,19 @@ public class HomeFragment extends Fragment {
         setLocale(loadSelectedLanguage());
         return view;
     }
+    ActivityResultLauncher<CropImageContractOptions> cropImage = registerForActivityResult(new CropImageContract(), result -> {
+        if (result.isSuccessful()) {
+            Bitmap croppedBitmap = BitmapFactory.decodeFile(result.getUriFilePath(getActivity().getApplicationContext(), true));
+
+            int dimension = Math.min(croppedBitmap.getWidth(), croppedBitmap.getHeight());
+            Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(croppedBitmap, dimension, dimension);
+            Bitmap resizedBitmap = Bitmap.createScaledBitmap(croppedBitmap, IMAGE_SIZE, IMAGE_SIZE, false);
+
+            classifyImage(resizedBitmap, thumbnailBitmap);
+        } else {
+            Toast.makeText(requireContext(), "Image cropping canceled or failed", Toast.LENGTH_LONG).show();
+        }
+    });
     private void showLanguageMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(requireContext(), view);
         popupMenu.inflate(R.menu.language_menu);
