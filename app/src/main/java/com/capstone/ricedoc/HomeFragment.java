@@ -47,6 +47,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Locale;
@@ -88,14 +89,14 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //PERMISSIONS AND CAMERA/GALLERY BUTTON
+        //PERMISSIONS AND CAMERA AND GALLERY BUTTON
         getCameraPermission();
         camera = view.findViewById(R.id.camera);
         Drawable icon = getResources().getDrawable(R.drawable.baseline_photo_camera_24);
         camera.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null);
         gallery = view.findViewById(R.id.image);
 
-        //CLICK LISTENER FOR CAMERA/GALLERY BUTTON
+        //CLICK LISTENER FOR CAMERA AND GALLERY BUTTON
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -201,11 +202,26 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == REQUEST_CODE_GALLERY) {
-            if (resultCode == Activity.RESULT_OK && data != null) {
-                Uri selectedImageUri = data.getData();
+            if (requestCode == REQUEST_CODE_GALLERY) {
+                if (resultCode == Activity.RESULT_OK && data != null) {
+                    Uri selectedImageUri = data.getData();
 
-                startImageCropper(selectedImageUri);
+                    try {
+                        InputStream inputStream = requireContext().getContentResolver().openInputStream(selectedImageUri);
+                        Bitmap originalBitmap = BitmapFactory.decodeStream(inputStream);
+
+                        inputStream.close();
+
+                        int desiredWidth = 400;
+                        int desiredHeight = 600;
+
+                        Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, desiredWidth, desiredHeight);
+
+                        Uri tempUri = getImageUri(requireContext(), thumbnailBitmap);
+                        startImageCropper(tempUri);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
             } else {
                 Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_SHORT).show();
             }
