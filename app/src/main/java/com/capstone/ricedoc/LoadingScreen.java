@@ -24,6 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -157,8 +158,19 @@ public class LoadingScreen extends AppCompatActivity {
         // Save the image to the file
         File imageFile = new File(galleryFolder, imageFileName);
         saveBitmapToFile(imageBitmap, imageFile);
+
+        // Add .nomedia file to the directory
+        File nomediaFile = new File(galleryFolder, ".nomedia");
+        try {
+            if (!nomediaFile.exists()) {
+                nomediaFile.createNewFile();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     private static File createImageGalleryFolder() {
+        // Create the RiceDoc folder
         File galleryFolder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "RiceDoc");
 
         // Create the folder if it doesn't exist

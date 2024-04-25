@@ -65,11 +65,13 @@ public class BrownSpot extends AppCompatActivity {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                            TextView content1 = findViewById(R.id.content1);
-                            TextView content2 = findViewById(R.id.content2);
-                            TextView content3 = findViewById(R.id.content3);
+                            TextView diseaseInfoTV = findViewById(R.id.content1);
+                            TextView treatmentTV = findViewById(R.id.content2);
+                            TextView projectedDamageTV = findViewById(R.id.content3);
+                            TextView disclaimerTV = findViewById(R.id.content4);
 
                             String diseaseInfo = document.getString("DiseaseInfo");
+                            String projectedDamage = document.getString("Damage");
                             String disclaimer = document.getString("Disclaimer");
 
                             List<Object> treatmentInfoList = (List<Object>) document.get("TreatmentInfo");
@@ -81,13 +83,14 @@ public class BrownSpot extends AppCompatActivity {
                                 for (int i = 0; i < treatmentInfo.length; i++) {
                                     htmlStringBuilder.append("<b>").append("•").append("</b> ").append(treatmentInfo[i]).append("<br/><br/>");
                                 }
-                                content2.setText(Html.fromHtml(htmlStringBuilder.toString()));
+                                treatmentTV.setText(Html.fromHtml(htmlStringBuilder.toString()));
                             } else {
                                 Log.e("Error", "TreatmentInfo is null");
                             }
 
-                            content1.setText(diseaseInfo);
-                            content3.setText(disclaimer);
+                            diseaseInfoTV.setText(diseaseInfo);
+                            disclaimerTV.setText(disclaimer);
+                            projectedDamageTV.setText(projectedDamage);
                         }
 
                     }

@@ -16,7 +16,9 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +40,7 @@ import com.canhub.cropper.CropImage;
 import com.canhub.cropper.CropImageContract;
 import com.canhub.cropper.CropImageContractOptions;
 import com.canhub.cropper.CropImageOptions;
-import com.capstone.ricedoc.ml.Densenet121adam60;
+import com.capstone.ricedoc.ml.Densenet121Adam60NEW;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -57,6 +59,7 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE_PERMISSION = 11;
     private static final int REQUEST_CODE_CAMERA = 12;
     private static final int REQUEST_CODE_GALLERY = 13;
+    private static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 1;
     private ActivityResultLauncher<CropImageContractOptions> cropImage;
     int IMAGE_SIZE = 224;
     Button camera, gallery;
@@ -89,7 +92,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //PERMISSIONS AND CAMERA AND GALLERY BUTTON
+        //PERMISSIONS AND CAMERA AND GALLERY
         getCameraPermission();
         camera = view.findViewById(R.id.camera);
         Drawable icon = getResources().getDrawable(R.drawable.baseline_photo_camera_24);
@@ -212,8 +215,8 @@ public class HomeFragment extends Fragment {
 
                         inputStream.close();
 
-                        int desiredWidth = 400;
-                        int desiredHeight = 600;
+                        int desiredWidth = 250;
+                        int desiredHeight = 450;
 
                         Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, desiredWidth, desiredHeight);
 
@@ -248,17 +251,17 @@ public class HomeFragment extends Fragment {
     }
 
     private Uri getImageUri(Context context, Bitmap bitmap) {
+        // Compress bitmap to JPEG format
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
-        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Title", null);
+        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Temp", null);
         return Uri.parse(path);
     }
 
-
     private void classifyImage(Bitmap resizedBitmap, Bitmap thumbnailBitmap) {
         try {
-            Densenet121adam60 model = Densenet121adam60.newInstance(requireActivity().getApplication());
+            Densenet121Adam60NEW model = Densenet121Adam60NEW.newInstance(requireActivity().getApplication());
 
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * IMAGE_SIZE * IMAGE_SIZE * 3);
@@ -278,7 +281,7 @@ public class HomeFragment extends Fragment {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Densenet121adam60.Outputs outputs = model.process(inputFeature0);
+            Densenet121Adam60NEW.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
