@@ -147,7 +147,7 @@ public class LoadingScreen extends AppCompatActivity {
         Bitmap imageBitmap = BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length);
 
         // Create dir folder for image to save
-        File galleryFolder = createImageGalleryFolder();
+        File riceDocFolder = createImageGalleryFolder();
 
         // Create unique file name
         Date date = dateTime.toDate();
@@ -156,31 +156,22 @@ public class LoadingScreen extends AppCompatActivity {
         String imageFileName = "IMG_" + dateScan + "_" + selectedLocation + ".jpg";
 
         // Save the image to the file
-        File imageFile = new File(galleryFolder, imageFileName);
+        File imageFile = new File(riceDocFolder, imageFileName);
         saveBitmapToFile(imageBitmap, imageFile);
 
-        // Add .nomedia file to the directory
-        File nomediaFile = new File(galleryFolder, ".nomedia");
-        try {
-            if (!nomediaFile.exists()) {
-                nomediaFile.createNewFile();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
     private static File createImageGalleryFolder() {
         // Create the RiceDoc folder
-        File galleryFolder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "RiceDoc");
+        File riceDocFolder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), ".RiceDoc");
 
         // Create the folder if it doesn't exist
-        if (!galleryFolder.exists()) {
-            if (!galleryFolder.mkdirs()) {
+        if (!riceDocFolder.exists()) {
+            if (!riceDocFolder.mkdirs()) {
                 Log.e("ImageSaver", "Failed to create directory");
                 return null;
             }
         }
-        return galleryFolder;
+        return riceDocFolder;
     }
 
     private static void saveBitmapToFile(Bitmap imageBitmap, File imageFile) {

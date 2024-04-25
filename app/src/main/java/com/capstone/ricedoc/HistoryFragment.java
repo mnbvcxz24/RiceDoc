@@ -37,6 +37,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -172,7 +173,8 @@ public class HistoryFragment extends Fragment {
             linearLayoutInsideCard.setGravity(Gravity.CENTER);
 
             // IMAGE VIEW
-            String imagePath = "/storage/emulated/0/Pictures/RiceDoc/"+imageFileName;
+            String dirPath ="/storage/emulated/0/Pictures/.RiceDoc/";
+            String imagePath = dirPath+imageFileName;
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
 
             ImageView imageIv = new ImageView(requireContext());
@@ -182,6 +184,25 @@ public class HistoryFragment extends Fragment {
                     500
             ));
             imageIv.setPadding(30, 30, 20, 30);
+
+            // DELETE TEMP IMAGES
+            File directory = new File(dirPath);
+
+            File[] files = directory.listFiles();
+
+            if (files != null) {
+                for (File file : files) {
+                    // Check if the file name starts with "temp"
+                    if (file.getName().startsWith("temp")) {
+                        // Delete the file
+                        if (file.delete()) {
+                            System.out.println("File deleted: " + file.getName());
+                        } else {
+                            System.out.println("Failed to delete file: " + file.getName());
+                        }
+                    }
+                }
+            }
 
             // LOCATION TEXT VIEW
             TextView locationTv = new TextView(requireContext());

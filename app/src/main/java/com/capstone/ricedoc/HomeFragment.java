@@ -215,8 +215,8 @@ public class HomeFragment extends Fragment {
 
                         inputStream.close();
 
-                        int desiredWidth = 250;
-                        int desiredHeight = 450;
+                        int desiredWidth = 280;
+                        int desiredHeight = 480;
 
                         Bitmap thumbnailBitmap = ThumbnailUtils.extractThumbnail(originalBitmap, desiredWidth, desiredHeight);
 
@@ -251,13 +251,31 @@ public class HomeFragment extends Fragment {
     }
 
     private Uri getImageUri(Context context, Bitmap bitmap) {
-        // Compress bitmap to JPEG format
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        // Create the RiceDoc folder
+        File riceDocFolder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), ".RiceDoc");
 
-        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Temp", null);
-        return Uri.parse(path);
+        // Create the folder if it doesn't exist
+        if (!riceDocFolder.exists()) {
+            riceDocFolder.mkdirs();
+        }
+
+        // Create a file in the RiceDoc folder
+        File imageFile = new File(riceDocFolder, "temp_image_" + System.currentTimeMillis() + ".jpg");
+
+        try {
+            // Compress bitmap to JPEG format and save to file
+            FileOutputStream fos = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.close();
+
+            // Return the URI of the saved image file
+            return Uri.fromFile(imageFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
+
 
     private void classifyImage(Bitmap resizedBitmap, Bitmap thumbnailBitmap) {
         try {
